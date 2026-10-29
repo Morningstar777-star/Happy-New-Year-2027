@@ -24,10 +24,9 @@
   <br />
   <a href="#-why-happy-new-year-2027">Why 2027 Multiverse?</a> •
   <a href="#-the-three-cinematic-acts">The Three Acts</a> •
-  <a href="#-the-mathematics--physics-engine">Physics & Math</a> •
   <a href="#-system-architecture">Architecture</a> •
-  <a href="#-audio-synthesizer-specification">Audio Engine</a> •
   <a href="#-quickstart">Quickstart</a> •
+  <a href="#-contributing">Contributing</a> •
   <a href="#-license">License</a>
 </p>
 
@@ -149,42 +148,6 @@
 
 ---
 
-## 📐 The Mathematics & Physics Engine
-
-### 1. Pyrotechnic Particle Ballistics (Drag & Gravity Kinetics)
-Each firework spark trajectory $\vec{r}(t)$ is governed by gravitational acceleration and non-linear aerodynamic velocity drag:
-
-$$\vec{r}(t) = \vec{r}_0 + \int_0^t \vec{v}(u) \, du$$
-
-$$\frac{d\vec{v}}{dt} = \vec{g} - \gamma |\vec{v}| \vec{v}$$
-
-Where:
-* **$\vec{g} = (0, 0.18)\text{ px/frame}^2$**: Downward gravitational acceleration.
-* **$\gamma \approx 0.04$**: Aerodynamic drag coefficient decelerating explosive fragments over time.
-
-### 2. Spherical Blast Velocity Distribution
-Upon detonation, particle fragments disperse in a uniform 3D spherical shell projected onto the 2D viewport plane:
-
-$$\vec{v}_0 = v_{\text{blast}} \begin{pmatrix} \sin\theta \cos\phi \\ \sin\theta \sin\phi \end{pmatrix} + \vec{\epsilon}, \quad \vec{\epsilon} \sim \mathcal{N}\left(0, \sigma^2 \mathbf{I}\right)$$
-
-Where $\theta \in [0, \pi]$, $\phi \in [0, 2\pi)$, and $\vec{\epsilon}$ introduces natural variance into spark burst radius.
-
-### 3. Relativistic Gravitational Lensing (Schwarzschild Geodesic Warp)
-The spacetime distortion surrounding the central black hole calculates photon deflection angle $\hat{\alpha}$:
-
-$$\hat{\alpha}(b) = \frac{4 G M}{c^2 b} = \frac{2 r_s}{b}$$
-
-Where $r_s$ is the Schwarzschild radius and $b$ is the impact parameter of star particles approaching the center core.
-
-### 4. Kinetic SVG Calligraphy Morph (Stroke-Dashoffset Interpolation)
-Handwriting stroke reveal is modulated through a cubic ease-out transfer function:
-
-$$\text{offset}(t) = L \cdot \left[1 - \left(1 - (1 - t)^3\right)\right], \quad t \in [0, 1]$$
-
-Where $L$ is the total arc length of each typographic Bézier curve path.
-
----
-
 ## 🛠️ System Architecture
 
 ```mermaid
@@ -220,66 +183,13 @@ flowchart TD
 
 ---
 
-## 🎹 Audio Synthesizer Specification
-
-Happy New Year 2027 features a **Zero-Asset Web Audio Synthesizer** that runs natively in the browser without loading sound files, ensuring zero-latency haptic sound on all interactions:
-
-| Interaction Event | Wave Type | Frequency Transition ($f_0 \to f_1$) | Duration | Audio Characteristic |
-| :--- | :---: | :---: | :---: | :--- |
-| **Button Hover / Focus** | Sine | $440\text{ Hz} \to 554\text{ Hz}$ ($A_4 \to C^\sharp_5$) | $60\text{ ms}$ | Subtle harmonic rising tick |
-| **Tactile Mechanical Click** | Triangle | $800\text{ Hz} \to 120\text{ Hz}$ | $45\text{ ms}$ | High-fidelity haptic mechanical snap |
-| **Share Link Copying** | Sine Chime | $523\text{ Hz} \to 1046\text{ Hz}$ ($C_5 \to C_6$) | $180\text{ ms}$ | Crystal success chime |
-| **Sound Toggle Switch** | Square | $320\text{ Hz} \to 640\text{ Hz}$ | $80\text{ ms}$ | Physical rotary toggle impulse |
-
----
-
 ## 📦 Quickstart
 
-### Option 1: Live Web Experience (Zero Setup)
-Launch the production experience immediately:
+Launch the live celebration directly in your browser with zero setup:
 👉 **[https://yrphappynewyearcoep27.netlify.app/](https://yrphappynewyearcoep27.netlify.app/)**
 
-To test personalized sharing, add your name:
+To create and share a personalized greeting card link, simply append your name:
 👉 **[https://yrphappynewyearcoep27.netlify.app/?from=Yash](https://yrphappynewyearcoep27.netlify.app/?from=Yash)**
-
----
-
-### Option 2: Local Preview (Python Server)
-Clone the repository and run a local HTTP server:
-```bash
-# Clone the repository
-git clone https://github.com/Morningstar777-star/Happy-New-Year-2027.git
-
-# Navigate into the project folder
-cd Happy-New-Year-2027
-
-# Launch a local server
-python -m http.server 8080
-```
-Open **[http://localhost:8080](http://localhost:8080)** in any modern web browser.
-
----
-
-### Option 3: Deploy to Netlify
-The repository includes a production-ready `netlify.toml` with optimized caching headers and asset compression rules:
-
-1. Fork or push this repository to GitHub.
-2. Link your repository in your [Netlify Dashboard](https://app.netlify.com/).
-3. Leave build command empty and set publish directory to `.`.
-4. Deploy — all security headers, robots, and sitemaps are pre-configured.
-
----
-
-## ⚡ Performance Benchmarks & Browser Matrix
-
-| Platform / Browser | Engine | Resolution Tested | FPS | Bundle Size | Cold Load Time |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Google Chrome (Desktop)** | Blink | $3840 \times 2160$ (4K) | **60 FPS** | $< 120\text{ KB}$ | **0.42 s** |
-| **Apple Safari (macOS)** | WebKit | $2560 \times 1600$ (Retina) | **60 FPS** | $< 120\text{ KB}$ | **0.48 s** |
-| **Microsoft Edge (Windows)** | Blink | $1920 \times 1080$ (1080p) | **60 FPS** | $< 120\text{ KB}$ | **0.39 s** |
-| **Mozilla Firefox** | Gecko | $1920 \times 1080$ | **60 FPS** | $< 120\text{ KB}$ | **0.52 s** |
-| **Apple Safari (iOS)** | WebKit | $393 \times 852$ (iPhone 16) | **60 FPS** | $< 120\text{ KB}$ | **0.61 s** |
-| **Chrome Mobile (Android)** | Blink | $412 \times 915$ (Pixel 8) | **60 FPS** | $< 120\text{ KB}$ | **0.58 s** |
 
 ---
 
