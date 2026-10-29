@@ -107,10 +107,10 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- Google Fonts: Premium Typography Matrix (Instrument Serif + Plus Jakarta Sans + Cinzel + Inter) -->
+    <!-- Google Fonts: Premium Typography Matrix (Instrument Serif + Montserrat + Plus Jakarta Sans + Cinzel + Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
 
     <style>
         /* --- RESET & BASICS --- */
@@ -306,152 +306,65 @@
             100% { background-color: #ea1; }
         }
 
-        /* Glassmorphism UI Box */
+        /* Glassmorphism UI Box (Original Cute & Compact) */
         .glass-box {
             position: relative; z-index: 10;
-            border-radius: 28px;
-            padding: 44px 52px; 
-            min-width: 420px;
-            max-width: 470px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            
+            /* Desktop Default */
+            padding: 40px 60px; 
+            min-width: 400px;
+            
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
             color: white;
             transition: all 0.3s ease;
         }
 
-        .glass-pill-header {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 5px 14px;
-            border-radius: 9999px;
-            margin-bottom: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.85);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-        .glass-status-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #ffd700;
-            box-shadow: 0 0 8px #ffd700;
-        }
-
-        .sender-greeting {
-            margin-bottom: 22px;
-            padding: 10px 20px;
-            font-size: 13.5px;
-            color: #ffd700;
-            border-radius: 9999px;
-            text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
-            letter-spacing: 0.5px;
-        }
-
         .glass-title {
-            font-size: clamp(20px, 3.5vw, 26px);
-            letter-spacing: -0.5px;
-            margin-bottom: 26px;
-            font-weight: 500;
-            color: #ffffff;
-            line-height: 1.2;
+            font-size: 16px;
+            text-transform: uppercase; letter-spacing: 3px;
+            margin-bottom: 30px; opacity: 0.8; font-weight: 300;
         }
 
         /* Timer Rows */
         .timer-row {
             display: flex; align-items: baseline; justify-content: center;
-            margin-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 10px;
         }
-        .timer-row:last-child { border-bottom: none; margin-bottom: 28px; }
+        .timer-row:last-child { border-bottom: none; margin-bottom: 25px; }
         
-        .big-num { 
-            font-size: 52px; 
-            font-weight: 700; 
-            margin-right: 14px; 
-            font-family: 'Cinzel', serif;
-            letter-spacing: -1px;
-            background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.7) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 25px rgba(255, 255, 255, 0.3); 
-        }
-        .label { 
-            font-size: 13px; 
-            font-weight: 500; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            color: rgba(255, 255, 255, 0.7); 
-        }
+        .big-num { font-size: 50px; font-weight: 700; margin-right: 15px; text-shadow: 0 0 20px rgba(255,255,255,0.3); }
+        .label { font-size: 16px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
         
-        /* Buttons inside Glass */
-        .glass-btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: center;
+        /* The Button inside Glass */
+        .glass-box button {
+            margin-top: 15px;
+            padding: 15px 40px; font-size: 16px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;
+            color: #333; background: rgba(255,255,255,0.9); border: none;
+            border-radius: 50px; cursor: pointer; box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            transition: transform 0.2s, background 0.2s;
         }
-        .primary-btn {
-            width: 100%;
-            padding: 15px 36px;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #0b0f19;
-            background: linear-gradient(135deg, #ffffff 0%, #fff2be 50%, #fbd874 100%);
-            border: none;
-            border-radius: 9999px;
-            cursor: pointer;
-            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.9);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-        }
-        .primary-btn:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.65), inset 0 1px 1px #ffffff;
-        }
-        .secondary-btn {
-            width: 100%;
-            padding: 13px 30px;
-            font-size: 13px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #ffffff;
-            border-radius: 9999px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-        }
-        .secondary-btn:hover {
-            transform: translateY(-2px) scale(1.01);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
+        .glass-box button:hover { background: white; transform: scale(1.05); box-shadow: 0 0 30px rgba(255,255,255,0.6); }
 
-        /* --- MOBILE OPTIMIZATION --- */
+        /* --- MOBILE OPTIMIZATION (FIXED WIDTH) --- */
         @media screen and (max-width: 768px) {
             .glass-box {
                 min-width: unset;
-                width: 88%;
-                max-width: 340px;
-                padding: 34px 22px;
+                width: 75%;
+                max-width: 320px;
+                padding: 30px 20px;
             }
-            .glass-title { font-size: 18px; margin-bottom: 20px; }
-            .big-num { font-size: 38px; margin-right: 10px; }
+            .glass-title { font-size: 12px; margin-bottom: 20px; }
+            .big-num { font-size: 35px; margin-right: 10px; }
             .label { font-size: 12px; }
-            .primary-btn { padding: 13px 26px; font-size: 13px; }
-            .secondary-btn { padding: 12px 22px; font-size: 12px; }
+            .glass-box button { padding: 12px 30px; font-size: 14px; }
             .sound-toggle-btn { top: 16px; right: 16px; padding: 7px 14px; font-size: 12px; }
         }
 
@@ -900,26 +813,10 @@
     <div id="winter-wrapper">
         <div class="winter-anim-overlay"></div>
         
-        <div class="glass-box liquid-glass-strong">
-            <div id="sender-greeting" class="sender-greeting liquid-glass" style="display:none;"></div>
-            <div class="glass-pill-header">
-                <span class="glass-status-dot"></span>
-                <span class="glass-tagline">CELESTIAL TRANSITION</span>
-            </div>
-            <div class="glass-title font-sans">
-                Countdown to <span class="font-serif italic font-normal text-gold">2027</span>
-            </div>
+        <div class="glass-box">
+            <div class="glass-title">Countdown to 2027</div>
             <div id="countdown">Loading...</div>
-            <div class="glass-btn-group">
-                <button id="triggerBtn" class="primary-btn">
-                    <span>Celebrate 2027 Now</span>
-                    <span>✨</span>
-                </button>
-                <button id="openShareBtnWinter" class="secondary-btn liquid-glass">
-                    <span>Share Wishes</span>
-                    <span>🎁</span>
-                </button>
-            </div>
+            <button id="triggerBtn">New Year Now!</button>
         </div>
     </div>
 
@@ -1914,8 +1811,11 @@
             setTimeout(() => senderNameInput.focus(), 150);
         };
 
-        document.getElementById('openShareBtnWinter').addEventListener('click', openShareModal);
-        document.getElementById('openShareBtnCel').addEventListener('click', openShareModal);
+        const shareWinterBtn = document.getElementById('openShareBtnWinter');
+        if (shareWinterBtn) shareWinterBtn.addEventListener('click', openShareModal);
+
+        const shareCelBtn = document.getElementById('openShareBtnCel');
+        if (shareCelBtn) shareCelBtn.addEventListener('click', openShareModal);
 
         closeShareModal.addEventListener('click', () => {
             window.tactileSound.playMechanicalClick();
