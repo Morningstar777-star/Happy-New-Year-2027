@@ -49,13 +49,13 @@
 
 ---
 
-#### 🎬 Official 1080p 60FPS Demonstration Video (Unedited Master Recording)
+#### 🎬 Official 1080p 60FPS Demonstration Walkthrough (Autoplaying Live Demo)
 
-> **Direct demonstration video recording of the entire 71-second experience**, showcasing the relativistic black hole, high-speed wormhole dive, emerald aurora countdown, and the grand fireworks celebration with 100% original fidelity.
+> **Silky-smooth 60fps walkthrough playing automatically across all 4 acts**, recorded directly in 1080p 60FPS. Experience the relativistic black hole singularity, wormhole spacetime dive, emerald aurora countdown chronometer, and the grand fireworks celebration with 100% original fidelity.
 
 <p align="center">
-  <a href="https://github.com/Morningstar777-star/Happy-New-Year-2027/releases/download/v1.0.0/Happy-New-Year-2027-Original-Walkthrough-1080p60.mp4">
-    <img src="docs/assets/hero_preview.png" alt="Happy New Year 2027 1080p Walkthrough Video Preview" width="860" style="border-radius: 12px; box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7); border: 1px solid rgba(255, 215, 0, 0.35);" />
+  <a href="https://yrphappynewyearcoep27.netlify.app/">
+    <img src="docs/assets/demo_walkthrough.gif" alt="Happy New Year 2027 Autoplaying 60fps Demonstration Walkthrough" width="880" style="border-radius: 14px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.75); border: 1px solid rgba(255, 215, 0, 0.4);" />
   </a>
   <br /><br />
   <a href="https://github.com/Morningstar777-star/Happy-New-Year-2027/releases/download/v1.0.0/Happy-New-Year-2027-Original-Walkthrough-1080p60.mp4">
@@ -68,6 +68,10 @@
   &nbsp;
   <a href="docs/assets/Happy-New-Year-2027-Walkthrough.mp4">
     <img src="https://img.shields.io/badge/Git_LFS_Repository-Master_Asset-10B981?style=for-the-badge&logo=gitlfs&logoColor=white" alt="Git LFS Master Asset" />
+  </a>
+  &nbsp;
+  <a href="https://yrphappynewyearcoep27.netlify.app/">
+    <img src="https://img.shields.io/badge/Launch_Live-Experience-10B981?style=for-the-badge&logo=netlify&logoColor=white" alt="Launch Live Experience" />
   </a>
 </p>
 
