@@ -1,89 +1,117 @@
 <div align="center">
 
-<img src="favicon.svg" alt="Happy New Year 2027 Emblem" width="96" height="96">
+<!-- ═══════════════════════════════════════════════════════════════════════
+     ANIMATED COSMIC BANNER — SVG with SMIL animations, no JS required
+     Renders on GitHub's SVG-safe sandbox (all animations inline)
+     ═══════════════════════════════════════════════════════════════════════ -->
 
-# Happy New Year 2027
+<img src="banner.svg" alt="Happy New Year 2027" width="900">
 
-An interactive 3D WebGL countdown and celebration web experience built with Three.js, GSAP, and HTML5 Canvas.
+<br/>
+<br/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Three.js](https://img.shields.io/badge/Three.js-r163-black?logo=three.js)](https://threejs.org/)
-[![GSAP](https://img.shields.io/badge/GSAP-3.12-green?logo=greensock)](https://greensock.com/gsap/)
-[![WebGL](https://img.shields.io/badge/WebGL-2.0-red?logo=webgl)](https://www.khronos.org/webgl/)
-[![Deploy: Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify)](https://www.netlify.com/)
+<a href="https://yrphappynewyearcoep27.netlify.app/" target="_blank">
+  <img src="https://img.shields.io/badge/▶  LIVE  EXPERIENCE-yrphappynewyearcoep27.netlify.app-0a0a14?style=for-the-badge&labelColor=1a0a00&color=FFB300&logoColor=FFD54F" alt="Live Demo">
+</a>
 
-[Live Demo](https://happy-new-year-2027.netlify.app) &bull; [GitHub Repository](https://github.com/Morningstar777-star/Happy-New-Year-2027)
+<br/><br/>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-FFD54F?style=flat-square&labelColor=0d0d0d)](LICENSE)
+[![Three.js](https://img.shields.io/badge/Three.js-r163-white?style=flat-square&logo=threedotjs&logoColor=white&labelColor=0d0d0d)](https://threejs.org/)
+[![GSAP](https://img.shields.io/badge/GSAP-3.12-88CE02?style=flat-square&labelColor=0d0d0d)](https://greensock.com/gsap/)
+[![WebGL](https://img.shields.io/badge/WebGL-2.0-990000?style=flat-square&labelColor=0d0d0d)](https://www.khronos.org/webgl/)
+[![Deploy: Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white&labelColor=0d0d0d)](https://www.netlify.com/)
 
 </div>
 
 ---
 
-## Overview
+## What Is This?
 
-This project guides visitors through a 3-stage visual sequence welcoming 2027:
+**Happy New Year 2027** is a browser-native 3D experience that guides visitors through three cinematic acts — a relativistic spacetime tunnel, a winter aurora countdown, and a live fireworks celebration — entirely without any framework or build system. Open `index.html`, and it runs.
 
-1. **Cosmic Spacetime Journey**: A Three.js WebGL scene featuring a procedural wormhole tunnel, gravitational lensing shaders around an event horizon, an accretion disk, and kinetic multilingual typography (English and Marathi) driven by GSAP.
-2. **Winter Countdown**: A real-time countdown targeting midnight January 1, 2027 (00:00:00) rendered within a compact glassmorphic card over an animated mountain and aurora backdrop.
-3. **Grand Celebration**: An interactive dual-canvas particle fireworks display with SVG stroke calligraphy ("Happy New Year"), a golden 2027 emblem, and customizable greeting links.
+The experience is also built to be shared. Anyone can create a personalized greeting link by appending their name to the URL: `?from=Yashraj`. When a friend opens that link, they see a custom greeting before entering the 2027 countdown.
+
+**[→ Open the live experience](https://yrphappynewyearcoep27.netlify.app/)**
 
 ---
 
-## Features
+## The Three Acts
 
-- **Procedural 3D Shaders**: Three.js WebGL wormhole tunnel with Perlin noise distortion, GLSL gravitational lensing, and interactive camera motion.
-- **Multilingual Kinetic Typography**: Text animation with blur, 3D scale, and rotational transitions using GSAP and `Intl.Segmenter`.
-- **Targeted Countdown**: Real-time ticker counting down days, hours, minutes, and seconds to 2027 with an immediate preview button.
-- **Physics-Based Particle Fireworks**: Canvas particle engine simulating gravity, friction, velocity decay, and color trails.
-- **Personalized Greeting Generator**: Supports URL query parameters (`?from=Name`) so visitors can generate customized greeting links for friends and family with integrated sharing options.
-- **Audio Crossfade Engine**: Web Audio and HTML5 audio system with smooth transitions between ambient space atmospheric tracks and celebration music, including a floating mute toggle.
-- **Search and GEO Optimization**: Structured data (JSON-LD schemas for `WebApplication`, `Event`, and `FAQPage`), OpenGraph and Twitter card metadata, `llms.txt` manifest, `sitemap.xml`, and `robots.txt`.
+```
+ACT I                     ACT II                    ACT III
+─────────────────────     ─────────────────────     ─────────────────────
+Three.js Wormhole          Aurora Winter Canvas      Dual Canvas Fireworks
+                     ──▶                       ──▶
+Gravitational Lens         Glassmorphic Countdown    SVG Stroke Calligraphy
+GLSL Shaders               Color-Cycling Aurora      Golden 2027 Emblem
+Kinetic Typography         Real-Time Timer Tick      Personalized Sharing
+Marathi + English          January 1, 2027 Target    WhatsApp / X / Link
+```
+
+### Act I — Cosmic Spacetime
+
+A procedural Three.js WebGL tunnel built from a multi-octave Perlin noise geometry. The camera drifts forward through a wormhole while a gravitational lensing GLSL shader bends star-field light around a simulated event horizon. 150,000 star particles fill the surrounding space. Kinetic text sequences in English and Marathi (`"येणाऱ्या वर्षासाठी, एक निशब्द आशा."`) animate in via GSAP using `Intl.Segmenter` grapheme-cluster splitting for precise per-character timing.
+
+### Act II — Winter Aurora Countdown
+
+A painterly mountain and aurora backdrop (CSS animated, no video) hosts a compact glassmorphic card showing the real-time countdown to `January 1, 2027 00:00:00`. The card was deliberately kept small and elegant — the aurora artwork is the centerpiece, not the timer. A single "New Year Now!" button skips directly to Act III.
+
+### Act III — Grand Celebration
+
+A dual HTML5 Canvas particle fireworks engine launches shells that burst with gravity, air resistance, and fading color trails. The "Happy New Year" calligraphy appears via SVG `stroke-dashoffset` animation. A radiant golden **2027** numeral glows beneath it. From here, visitors can open the personalized share modal to generate and send custom greeting links.
+
+---
+
+## Personalized Greeting System
+
+```
+You share:  https://yrphappynewyearcoep27.netlify.app/?from=Yashraj
+                                                                ↑
+                                                        your name here
+
+Your friend opens it and sees:
+┌─────────────────────────────────────────────────────┐
+│  🎇  Yashraj  sent you a 2027 New Year greeting!    │
+│       Tap anywhere to begin the experience →         │
+└─────────────────────────────────────────────────────┘
+```
+
+The greeting pill appears in the cosmic intro before any audio starts, so it feels like a personal invitation rather than a popup. Share via WhatsApp, X (Twitter), or copy the link directly from the in-experience share modal.
 
 ---
 
 ## Tech Stack
 
-| Component | Technology |
-|---|---|
-| Core | HTML5, CSS3, JavaScript (ES6+) |
-| 3D & Graphics | Three.js (r163), Custom GLSL Shaders, WebGL 2.0 |
-| Animations | GSAP 3.12, SVG stroke-dashoffset |
-| 2D Canvas | HTML5 Canvas, jQuery 3.6 |
-| Audio | HTML5 Audio, Web Audio API |
-| Deployment | Netlify |
+| Layer | Technology | Purpose |
+|---|---|---|
+| **3D Engine** | Three.js r163, WebGL 2.0 | Wormhole, star field, lensing shader |
+| **GLSL Shaders** | Custom vertex + fragment | Accretion disk, gravitational lensing, Perlin noise |
+| **Motion** | GSAP 3.12 | Kinetic text, scene transitions, SVG calligraphy |
+| **2D Canvas** | HTML5 Canvas, jQuery 3.6 | Fireworks particle engine, twig growth |
+| **Typography** | Cinzel, Montserrat, Tiro Devanagari | Headings, UI, Marathi script |
+| **Audio** | HTML5 Audio, Web Audio API | Space ambience → celebration crossfade |
+| **Deployment** | Netlify + `netlify.toml` | Static hosting, CDN, security headers |
+| **Discoverability** | Schema.org JSON-LD, `llms.txt`, `sitemap.xml` | SEO, GEO, social cards |
+
+No npm. No bundler. No build step. Drop the files on any static host and it works.
 
 ---
 
 ## Running Locally
 
-Clone the repository and serve it using any local HTTP server:
-
 ```bash
-# Clone the repository
 git clone https://github.com/Morningstar777-star/Happy-New-Year-2027.git
-
-# Navigate into the project folder
 cd Happy-New-Year-2027
 
-# Start a local static server (Python 3)
+# Python 3
 python -m http.server 8080
 
-# Or with Node.js
+# Node.js
 npx serve .
 ```
 
-Open `http://localhost:8080` in your web browser.
-
----
-
-## Personalized Greetings
-
-You can create a personalized greeting link by adding the `?from=` parameter:
-
-```
-https://happy-new-year-2027.netlify.app/?from=YourName
-```
-
-When opened, the experience presents a greeting pill noting who sent the wish before transitioning into the celebration screen.
+Visit `http://localhost:8080`. Audio requires a user gesture (browser policy); click or tap anywhere to unlock sound.
 
 ---
 
@@ -91,41 +119,60 @@ When opened, the experience presents a greeting pill noting who sent the wish be
 
 ```
 Happy-New-Year-2027/
-├── index.html           # Main markup, Three.js shaders, styles, and animation logic
-├── favicon.svg          # Vector Chrono-Nova brand crest
-├── favicon.ico          # Multi-resolution desktop favicon
-├── favicon.png          # High-resolution 512x512 application icon
-├── apple-touch-icon.png # iOS home screen touch icon
-├── start.mp3            # Atmospheric background audio for the opening sequence
-├── celebration.mp3      # Audio track for the fireworks celebration
-├── netlify.toml         # Netlify headers, cache rules, and security policies
-├── robots.txt           # Search engine and crawler instructions
-├── sitemap.xml          # XML sitemap
-├── llms.txt             # Generative Engine Optimization manifest
-├── LICENSE              # MIT License
-└── README.md            # Project documentation
+│
+├── index.html            ← Everything: markup, Three.js shaders, GSAP, Canvas, styles
+│
+├── start.mp3             ← Cosmic journey atmospheric track
+├── celebration.mp3       ← Fireworks celebration music
+│
+├── favicon.svg           ← 2027 Cosmic Chrono-Nova vector emblem
+├── favicon.ico           ← Multi-resolution desktop icon
+├── favicon.png           ← 512×512 master icon
+├── apple-touch-icon.png  ← iOS home screen (180×180)
+│
+├── netlify.toml          ← Headers, caching, and security rules
+├── robots.txt            ← Crawler permissions (Googlebot, GPTBot, ClaudeBot, etc.)
+├── sitemap.xml           ← XML sitemap for search indexing
+├── llms.txt              ← Generative Engine Optimization manifest
+│
+└── LICENSE               ← MIT
 ```
+
+---
+
+## Discoverability & GEO
+
+Structured data, social cards, and AI search optimization are baked in to maximize organic reach:
+
+- **JSON-LD Schemas**: `WebApplication`, `Event` (New Year 2027), `FAQPage` — feeds Google rich snippets.
+- **OpenGraph + Twitter Cards**: Preview cards for WhatsApp, Facebook, X with correct `og:image` and `og:description`.
+- **`llms.txt`**: Project architecture manifest for Claude, ChatGPT Search, Perplexity, and Gemini to cite correctly.
+- **`robots.txt`**: Allows all major crawlers including `GPTBot`, `ClaudeBot`, `PerplexityBot`, and `Applebot`.
+- **Semantic SR Layer**: A hidden `<main class="sr-only">` contains full readable text for screen readers and crawlers without affecting the visual WebGL experience.
 
 ---
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For significant changes, open an issue first.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -m 'Add improvement'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Open a Pull Request
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feature/your-idea`
+3. Commit with a clear message: `git commit -m 'feat: describe what you added'`
+4. Push and open a Pull Request
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT. See [LICENSE](LICENSE).
 
 ---
 
-## Author
+<div align="center">
 
-Created by [Yashraj Patil](https://github.com/Morningstar777-star).
+Made by [Yashraj Patil](https://github.com/Morningstar777-star)
+
+**[→ Experience it live](https://yrphappynewyearcoep27.netlify.app/)**
+
+</div>

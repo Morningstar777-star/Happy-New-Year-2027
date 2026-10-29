@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" style="display:block">
   <defs>
     <!-- Deep Obsidian Space Core -->
     <radialGradient id="bgObsidian" cx="45%" cy="40%" r="65%">
@@ -16,7 +16,7 @@
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Metallic Gold Rim Gradients (Illuminated 10:30 to 4:30) -->
+    <!-- Metallic Gold Rim -->
     <linearGradient id="goldRim" x1="15%" y1="15%" x2="85%" y2="85%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="18%" stop-color="#FFF9C4"/>
@@ -26,7 +26,7 @@
       <stop offset="100%" stop-color="#5D3400"/>
     </linearGradient>
 
-    <!-- Coherent 10:30 Light Source: Specular Titanium Platinum Gold -->
+    <!-- Specular Gold -->
     <linearGradient id="specularGold" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="25%" stop-color="#FFFDE7"/>
@@ -35,7 +35,7 @@
       <stop offset="100%" stop-color="#FBC02D"/>
     </linearGradient>
 
-    <!-- Coherent 10:30 Light Source: Medium Lit Warm Gold -->
+    <!-- Medium Gold -->
     <linearGradient id="mediumGold" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFF9C4"/>
       <stop offset="45%" stop-color="#FFCA28"/>
@@ -43,7 +43,7 @@
       <stop offset="100%" stop-color="#D4AF37"/>
     </linearGradient>
 
-    <!-- Coherent 10:30 Light Source: Deep Bronze Burnished Shadow -->
+    <!-- Shadow Gold -->
     <linearGradient id="shadowGold" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#E5A93C"/>
       <stop offset="35%" stop-color="#C59B27"/>
@@ -51,20 +51,21 @@
       <stop offset="100%" stop-color="#4E340E"/>
     </linearGradient>
 
-    <!-- Diagonal Highlight & Shadow Gradients -->
+    <!-- Diagonal Lit -->
     <linearGradient id="diagLit" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="35%" stop-color="#FFF9C4"/>
       <stop offset="100%" stop-color="#FFD54F"/>
     </linearGradient>
 
+    <!-- Diagonal Shadow -->
     <linearGradient id="diagShad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#B28921"/>
       <stop offset="65%" stop-color="#6E4A0C"/>
       <stop offset="100%" stop-color="#362204"/>
     </linearGradient>
 
-    <!-- Relativistic Spacetime Orbit Gradient -->
+    <!-- Orbit Gradient -->
     <linearGradient id="orbitGrad" x1="10%" y1="10%" x2="90%" y2="90%">
       <stop offset="0%" stop-color="#00F2FE" stop-opacity="1"/>
       <stop offset="25%" stop-color="#4FACFE" stop-opacity="0.45"/>
@@ -73,7 +74,7 @@
       <stop offset="100%" stop-color="#FFF9C4" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Singularity Radiant Flare -->
+    <!-- Singularity Flare -->
     <radialGradient id="coreFlare" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="20%" stop-color="#FFFDE7" stop-opacity="1"/>
@@ -81,72 +82,72 @@
       <stop offset="75%" stop-color="#FFA000" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
+
+    <!-- Circular clip to contain everything -->
+    <clipPath id="circleClip">
+      <circle cx="256" cy="256" r="252"/>
+    </clipPath>
   </defs>
 
-  <!-- 1. Obsidian Shield Base with Dual-Tone Rim -->
-  <circle cx="256" cy="256" r="238" fill="url(#bgObsidian)" stroke="url(#goldRim)" stroke-width="8"/>
-  <circle cx="256" cy="256" r="234" fill="url(#auroraGlow)"/>
+  <!-- Circular clipping container ensures no bleed -->
+  <g clip-path="url(#circleClip)">
+    <!-- 1. Obsidian Background Fill -->
+    <circle cx="256" cy="256" r="252" fill="url(#bgObsidian)"/>
+    <circle cx="256" cy="256" r="252" fill="url(#auroraGlow)"/>
 
-  <!-- 2. Concentric Astrolabe Chrono-Rings -->
-  <circle cx="256" cy="256" r="220" fill="none" stroke="#FFD54F" stroke-width="1.8" stroke-opacity="0.35" stroke-dasharray="3 7"/>
-  <circle cx="256" cy="256" r="172" fill="none" stroke="#00F2FE" stroke-width="1.2" stroke-opacity="0.25"/>
-  <circle cx="256" cy="256" r="96" fill="none" stroke="#FFE082" stroke-width="1" stroke-opacity="0.3"/>
+    <!-- 2. Astrolabe Chrono-Rings -->
+    <circle cx="256" cy="256" r="220" fill="none" stroke="#FFD54F" stroke-width="1.8" stroke-opacity="0.35" stroke-dasharray="3 7"/>
+    <circle cx="256" cy="256" r="172" fill="none" stroke="#00F2FE" stroke-width="1.2" stroke-opacity="0.25"/>
+    <circle cx="256" cy="256" r="96" fill="none" stroke="#FFE082" stroke-width="1" stroke-opacity="0.3"/>
 
-  <!-- 3. Tilted Spacetime Gravitational Accretion Orbit (-28 deg) -->
-  <ellipse cx="256" cy="256" rx="206" ry="68" transform="rotate(-28 256 256)" fill="none" stroke="url(#orbitGrad)" stroke-width="5"/>
-  <!-- Orbital Planetary Transit Nodes -->
-  <circle cx="86" cy="162" r="5.5" fill="#00F2FE"/>
-  <circle cx="86" cy="162" r="10" fill="none" stroke="#00F2FE" stroke-opacity="0.6" stroke-width="1.5"/>
-  <circle cx="426" cy="350" r="6" fill="#FFF9C4"/>
-  <circle cx="426" cy="350" r="11" fill="none" stroke="#FFD54F" stroke-opacity="0.6" stroke-width="1.5"/>
+    <!-- 3. Tilted Spacetime Orbit -->
+    <ellipse cx="256" cy="256" rx="206" ry="68" transform="rotate(-28 256 256)" fill="none" stroke="url(#orbitGrad)" stroke-width="5"/>
 
-  <!-- 4. Secondary 45-degree Diagonal Rays -->
-  <!-- NW Ray (Directly facing 10:30 light) -->
-  <polygon points="256,256 244,268 148,148" fill="url(#specularGold)"/>
-  <polygon points="256,256 148,148 268,244" fill="url(#mediumGold)"/>
+    <!-- Orbital nodes -->
+    <circle cx="86" cy="162" r="5.5" fill="#00F2FE"/>
+    <circle cx="86" cy="162" r="10" fill="none" stroke="#00F2FE" stroke-opacity="0.6" stroke-width="1.5"/>
+    <circle cx="426" cy="350" r="6" fill="#FFF9C4"/>
+    <circle cx="426" cy="350" r="11" fill="none" stroke="#FFD54F" stroke-opacity="0.6" stroke-width="1.5"/>
 
-  <!-- NE Ray (Top lit, bottom shadow) -->
-  <polygon points="256,256 244,244 364,148" fill="url(#mediumGold)"/>
-  <polygon points="256,256 364,148 268,268" fill="url(#shadowGold)"/>
+    <!-- 4. Diagonal Rays -->
+    <polygon points="256,256 244,268 148,148" fill="url(#specularGold)"/>
+    <polygon points="256,256 148,148 268,244" fill="url(#mediumGold)"/>
 
-  <!-- SW Ray (Top lit, bottom shadow) -->
-  <polygon points="256,256 244,244 148,364" fill="url(#mediumGold)"/>
-  <polygon points="256,256 148,364 268,268" fill="url(#shadowGold)"/>
+    <polygon points="256,256 244,244 364,148" fill="url(#mediumGold)"/>
+    <polygon points="256,256 364,148 268,268" fill="url(#shadowGold)"/>
 
-  <!-- SE Ray (Directly in shadow of 10:30 light) -->
-  <polygon points="256,256 268,244 364,364" fill="url(#shadowGold)"/>
-  <polygon points="256,256 364,364 244,268" fill="url(#diagShad)"/>
+    <polygon points="256,256 244,244 148,364" fill="url(#mediumGold)"/>
+    <polygon points="256,256 148,364 268,268" fill="url(#shadowGold)"/>
 
-  <!-- 5. Primary Cardinal Celestial Nova Rays (3D Faceted Chiaroscuro) -->
-  <!-- North Ray: Left = Facing 10:30 light (Specular), Right = Shadow -->
-  <polygon points="256,256 226,256 256,48" fill="url(#specularGold)"/>
-  <polygon points="256,256 256,48 286,256" fill="url(#shadowGold)"/>
+    <polygon points="256,256 268,244 364,364" fill="url(#shadowGold)"/>
+    <polygon points="256,256 364,364 244,268" fill="url(#diagShad)"/>
 
-  <!-- West Ray: Top = Facing 10:30 light (Specular), Bottom = Shadow -->
-  <polygon points="256,256 256,226 48,256" fill="url(#specularGold)"/>
-  <polygon points="256,256 48,256 256,286" fill="url(#shadowGold)"/>
+    <!-- 5. Cardinal Nova Rays -->
+    <polygon points="256,256 226,256 256,48" fill="url(#specularGold)"/>
+    <polygon points="256,256 256,48 286,256" fill="url(#shadowGold)"/>
 
-  <!-- East Ray: Top = Facing 10:30 light (Medium Lit), Bottom = Shadow -->
-  <polygon points="256,256 256,226 464,256" fill="url(#mediumGold)"/>
-  <polygon points="256,256 464,256 256,286" fill="url(#shadowGold)"/>
+    <polygon points="256,256 256,226 48,256" fill="url(#specularGold)"/>
+    <polygon points="256,256 48,256 256,286" fill="url(#shadowGold)"/>
 
-  <!-- South Ray: Left = Facing 10:30 light (Medium Lit), Right = Shadow -->
-  <polygon points="256,256 226,256 256,464" fill="url(#mediumGold)"/>
-  <polygon points="256,256 256,464 286,256" fill="url(#shadowGold)"/>
+    <polygon points="256,256 256,226 464,256" fill="url(#mediumGold)"/>
+    <polygon points="256,256 464,256 256,286" fill="url(#shadowGold)"/>
 
-  <!-- 6. Central Singularity Core Aura -->
-  <circle cx="256" cy="256" r="64" fill="url(#coreFlare)"/>
+    <polygon points="256,256 226,256 256,464" fill="url(#mediumGold)"/>
+    <polygon points="256,256 256,464 286,256" fill="url(#shadowGold)"/>
 
-  <!-- 7. Central Faceted Diamond Chrono-Crystal (Coherent 10:30 lighting) -->
-  <!-- Top-Left Facet (Facing Light) -->
-  <polygon points="256,218 256,256 224,256" fill="#FFFFFF"/>
-  <!-- Top-Right Facet (Specular/Mid) -->
-  <polygon points="256,218 288,256 256,256" fill="#FFF9C4"/>
-  <!-- Bottom-Left Facet (Mid) -->
-  <polygon points="256,294 224,256 256,256" fill="#FFCA28"/>
-  <!-- Bottom-Right Facet (Shadow) -->
-  <polygon points="256,294 256,256 288,256" fill="#D4AF37"/>
+    <!-- 6. Core Singularity Aura -->
+    <circle cx="256" cy="256" r="64" fill="url(#coreFlare)"/>
 
-  <!-- 8. Luminous Singularity Point Spark -->
-  <circle cx="256" cy="256" r="7" fill="#FFFFFF"/>
+    <!-- 7. Faceted Diamond Crystal -->
+    <polygon points="256,218 256,256 224,256" fill="#FFFFFF"/>
+    <polygon points="256,218 288,256 256,256" fill="#FFF9C4"/>
+    <polygon points="256,294 224,256 256,256" fill="#FFCA28"/>
+    <polygon points="256,294 256,256 288,256" fill="#D4AF37"/>
+
+    <!-- 8. Central Spark -->
+    <circle cx="256" cy="256" r="7" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Gold Rim drawn OUTSIDE the clip so the stroke sits on the edge cleanly -->
+  <circle cx="256" cy="256" r="249" fill="none" stroke="url(#goldRim)" stroke-width="6"/>
 </svg>
