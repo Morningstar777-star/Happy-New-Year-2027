@@ -556,21 +556,27 @@
             display: none;
             justify-content: center;
             align-items: center;
-            padding: 24px;
+            padding: 20px 16px;
+            box-sizing: border-box;
+            overflow-y: auto;
         }
         .share-modal-overlay.active {
             display: flex;
         }
         .share-modal {
             position: relative;
-            border-radius: 32px;
-            padding: 44px 38px 40px;
-            max-width: 460px;
+            border-radius: 24px;
+            padding: 30px 28px 24px;
+            max-width: 430px;
             width: 100%;
+            max-height: calc(100vh - 40px);
+            box-sizing: border-box;
             color: #ffffff;
             text-align: center;
-            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 50px rgba(255, 215, 0, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(255, 215, 0, 0.1);
             animation: modalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            margin: auto;
         }
         @keyframes modalIn {
             from { opacity: 0; transform: scale(0.94) translateY(24px); }
@@ -591,37 +597,15 @@
             filter: blur(20px);
         }
 
-        .modal-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            padding: 4px 12px;
-            border-radius: 9999px;
-            font-size: 10.5px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: #ffd700;
-            background: rgba(255, 215, 0, 0.08);
-            border: 1px solid rgba(255, 215, 0, 0.25);
-            margin-bottom: 16px;
-        }
-        .badge-dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: #ffd700;
-            box-shadow: 0 0 6px #ffd700;
-        }
-
         .modal-close-btn {
             position: absolute;
-            top: 20px; right: 22px;
-            width: 34px;
-            height: 34px;
+            top: 14px; right: 16px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.75);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -631,29 +615,29 @@
         }
         .modal-close-btn:hover {
             color: #ffffff;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.18);
             transform: rotate(90deg);
-            border-color: rgba(255, 255, 255, 0.35);
+            border-color: rgba(255, 255, 255, 0.4);
         }
         .modal-title {
-            font-size: clamp(22px, 4vw, 26px);
+            font-size: clamp(19px, 3.4vw, 23px);
             font-weight: 600;
             letter-spacing: -0.5px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             line-height: 1.25;
             color: #ffffff;
         }
         .modal-desc {
-            font-size: 14px;
+            font-size: 13px;
             color: rgba(255, 255, 255, 0.72);
-            margin-bottom: 26px;
-            line-height: 1.55;
-            max-width: 360px;
+            margin-bottom: 18px;
+            line-height: 1.48;
+            max-width: 350px;
             margin-left: auto;
             margin-right: auto;
         }
         .modal-input-group {
-            margin-bottom: 22px;
+            margin-bottom: 14px;
         }
         .input-wrapper {
             border-radius: 9999px;
@@ -666,11 +650,11 @@
         }
         .input-wrapper input {
             width: 100%;
-            padding: 14px 22px;
+            padding: 11px 20px;
             background: transparent;
             border: none;
             color: #ffffff;
-            font-size: 15px;
+            font-size: 14px;
             font-family: 'Plus Jakarta Sans', sans-serif;
             text-align: center;
             outline: none;
@@ -683,12 +667,12 @@
         .modal-share-actions {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 9px;
         }
         .share-btn {
             width: 100%;
-            padding: 13px 22px;
-            font-size: 13.5px;
+            padding: 11px 20px;
+            font-size: 12.5px;
             font-weight: 600;
             letter-spacing: 1px;
             border-radius: 9999px;
@@ -697,7 +681,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 9px;
             text-decoration: none;
         }
         
