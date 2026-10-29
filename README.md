@@ -1,111 +1,55 @@
-<div align="center">
+# Happy New Year 2027
 
-# 🎆 Happy New Year 2027
-### 🌌 Cosmic Spacetime Countdown & 3D WebGL Celebration Experience
+An interactive 3D WebGL countdown and celebration web experience built with Three.js, GSAP, and HTML5 Canvas.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Three.js](https://img.shields.io/badge/Three.js-r163-black?logo=three.js)](https://threejs.org/)
 [![GSAP](https://img.shields.io/badge/GSAP-3.12-green?logo=greensock)](https://greensock.com/gsap/)
 [![WebGL](https://img.shields.io/badge/WebGL-2.0-red?logo=webgl)](https://www.khronos.org/webgl/)
-[![Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify)](https://www.netlify.com/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Morningstar777-star/Happy-New-Year-2027/pulls)
+[![Deploy: Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify)](https://www.netlify.com/)
 
-**An award-winning, interactive 3D WebGL journey to welcome the arrival of 2027.**  
-Featuring relativistic gravitational lensing, cosmic wormholes, glassmorphism countdowns, real-time particle fireworks, and viral personalized wish sharing.
+[Live Demo](https://happy-new-year-2027.netlify.app) &bull; [GitHub Repository](https://github.com/Morningstar777-star/Happy-New-Year-2027)
 
 ---
 
-[🚀 **Live Demo on Netlify**](https://happy-new-year-2027.netlify.app) &nbsp;&bull;&nbsp; [✨ **Personalize Your Greeting**](#-personalized-viral-wish-generator) &nbsp;&bull;&nbsp; [🌟 **Star on GitHub**](https://github.com/Morningstar777-star/Happy-New-Year-2027)
+## Overview
+
+This project guides visitors through a 3-stage visual sequence welcoming 2027:
+
+1. **Cosmic Spacetime Journey**: A Three.js WebGL scene featuring a procedural wormhole tunnel, gravitational lensing shaders around an event horizon, an accretion disk, and kinetic multilingual typography (English and Marathi) driven by GSAP.
+2. **Winter Countdown**: A real-time countdown targeting midnight January 1, 2027 (00:00:00) rendered within a compact glassmorphic card over an animated mountain and aurora backdrop.
+3. **Grand Celebration**: An interactive dual-canvas particle fireworks display with SVG stroke calligraphy ("Happy New Year"), a golden 2027 emblem, and customizable greeting links.
 
 ---
 
-</div>
+## Features
 
-## 🌟 Visual Preview & Journey Overview
-
-The experience unfolds through three breathtaking cinematic stages:
-
-```
-[ Phase 1: Cosmic Spacetime ]  ──▶  [ Phase 2: Winter Countdown ]  ──▶  [ Phase 3: Grand Celebration ]
-   • Three.js Wormhole Tunnel           • Liquid Glass UI Timer             • Dual-Canvas Fireworks
-   • Relativistic Black Hole            • Dynamic Color Cycles               • SVG Calligraphy Stroke
-   • Multilingual Kinetic Text          • Personalized Greeting Pill         • Radiant 2027 Golden Badge
-```
+- **Procedural 3D Shaders**: Three.js WebGL wormhole tunnel with Perlin noise distortion, GLSL gravitational lensing, and interactive camera motion.
+- **Multilingual Kinetic Typography**: Text animation with blur, 3D scale, and rotational transitions using GSAP and `Intl.Segmenter`.
+- **Targeted Countdown**: Real-time ticker counting down days, hours, minutes, and seconds to 2027 with an immediate preview button.
+- **Physics-Based Particle Fireworks**: Canvas particle engine simulating gravity, friction, velocity decay, and color trails.
+- **Personalized Greeting Generator**: Supports URL query parameters (`?from=Name`) so visitors can generate customized greeting links for friends and family with integrated sharing options.
+- **Audio Crossfade Engine**: Web Audio and HTML5 audio system with smooth transitions between ambient space atmospheric tracks and celebration music, including a floating mute toggle.
+- **Search and GEO Optimization**: Structured data (JSON-LD schemas for `WebApplication`, `Event`, and `FAQPage`), OpenGraph and Twitter card metadata, `llms.txt` manifest, `sitemap.xml`, and `robots.txt`.
 
 ---
 
-## ✨ Key Features
+## Tech Stack
 
-### 1. 🌌 Relativistic Black Hole & Spacetime Wormhole (Three.js WebGL)
-- Procedural Three.js 3D wormhole tunnel with reactive multi-octave Perlin noise.
-- Gravitational lensing shader simulating light refraction around an event horizon.
-- Volumetric glowing accretion disk with procedural GLSL simplex noise flow.
-- 150,000 twinkling cosmic stars with dynamic field curvature.
-
-### 2. ✍️ Multilingual Kinetic Typography
-- Smart grapheme cluster segmentation using the `Intl.Segmenter` API.
-- Deep, philosophical transitional quotes in English and Marathi (*"येणाऱ्या वर्षासाठी, एक निशब्द आशा."*).
-- Hardware-accelerated GSAP particle blur, 3D scale, and rotational dispersal.
-
-### 3. ❄️ Liquid Glass Countdown to 2027
-- Ultra-precise real-time countdown to **January 1, 2027 (00:00:00)**.
-- Dual-filtered glassmorphism container with backdrop blur and border luminescence.
-- Ambient color-cycling winter atmosphere.
-- Instant *"Celebrate 2027 Now! 🎆"* trigger button.
-
-### 4. 🎇 Spectacular Fireworks & Calligraphy
-- 300+ particle physics fireworks engine with gravity, air friction, and burst scattering.
-- Procedural Japanese winter twig branch growth and starfield twinkling.
-- SVG stroke dashoffset animation revealing *"Happy New Year"*.
-- Radiant, golden **2027** emblem with blooming luminescence and drop shadows.
-
-### 5. 💌 Personalized Viral Wish Generator
-- Send customized New Year 2027 greetings to your friends and loved ones!
-- Append `?from=YourName` to the URL (e.g. `?from=Yashraj`) to display a personalized greeting pill.
-- Integrated **One-Click Share to WhatsApp**, **Share to X / Twitter**, and **Instant Link Copy** modal.
-
-### 6. 🎵 Dual-Track Orchestral Sound Engine
-- Ambient space transition audio crossfading into a jubilant celebration track.
-- Sleek floating sound toggle (`🔊 Sound On` / `🔇 Muted`) for complete user control.
-
----
-
-## 🔍 Built to Claude-SEO & GEO Industry Standards
-
-Optimized for top search visibility, viral sharing, and modern Generative Engine Optimization (GEO) according to the [`AgricIDaniel/claude-seo`](https://github.com/AgricIDaniel/claude-seo) standards:
-
-- **Schema.org JSON-LD Structured Data**:
-  - `WebApplication` schema for rich Google interactive snippets.
-  - `Event` schema for global New Year 2027 celebration discovery.
-  - `FAQPage` schema addressing top New Year 2027 search queries.
-- **Social Graph Optimization**:
-  - Open Graph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`) for Facebook, WhatsApp, and LinkedIn card previews.
-  - Twitter / X `summary_large_image` cards for viral social sharing.
-- **AI Search & Agent Readiness**:
-  - [`llms.txt`](llms.txt) for AI search engines (Claude, ChatGPT Search, Perplexity, Gemini).
-  - Clean [`robots.txt`](robots.txt) and [`sitemap.xml`](sitemap.xml) crawling structure.
-- **Accessibility & Crawler Indexability**:
-  - Screen-reader accessible semantic HTML layer (`<main class="sr-only">`) with high-ranking keywords, cultural blessings, and poetry indexed by search bots without altering the visual WebGL canvas.
-
----
-
-## 🛠️ Technology Stack
-
-| Layer | Technologies |
+| Component | Technology |
 |---|---|
-| **Core** | HTML5, CSS3 (Modern Flexbox/Grid), JavaScript (ES6+ Modules) |
-| **3D & Shaders** | [Three.js r163](https://threejs.org/), Custom GLSL Shaders, OrbitControls, EffectComposer, UnrealBloomPass |
-| **Motion Physics** | [GSAP 3.12](https://greensock.com/gsap/), SVG Stroke Animation |
-| **Canvas 2D** | jQuery 3.6, HTML5 Canvas Particle Engine |
-| **Typography** | Cinzel, Montserrat, Inter, Great Vibes, Tiro Devanagari Marathi |
-| **Audio** | HTML5 Spatial Web Audio |
-| **Hosting & CI/CD** | [Netlify](https://www.netlify.com/) |
+| Core | HTML5, CSS3, JavaScript (ES6+) |
+| 3D & Graphics | Three.js (r163), Custom GLSL Shaders, WebGL 2.0 |
+| Animations | GSAP 3.12, SVG stroke-dashoffset |
+| 2D Canvas | HTML5 Canvas, jQuery 3.6 |
+| Audio | HTML5 Audio, Web Audio API |
+| Deployment | Netlify |
 
 ---
 
-## 🚀 Quick Start & Local Preview
+## Running Locally
 
-Clone the repository and run locally with any local static server:
+Clone the repository and serve it using any local HTTP server:
 
 ```bash
 # Clone the repository
@@ -114,68 +58,64 @@ git clone https://github.com/Morningstar777-star/Happy-New-Year-2027.git
 # Navigate into the project folder
 cd Happy-New-Year-2027
 
-# Open with Python simple HTTP server
+# Start a local static server (Python 3)
 python -m http.server 8080
 
-# Or with Node.js npx serve
+# Or with Node.js
 npx serve .
 ```
 
-Then visit `http://localhost:8080` in any modern web browser (Chrome, Edge, Safari, Firefox).
+Open `http://localhost:8080` in your web browser.
 
 ---
 
-## 💌 How to Create & Share Your Personalized Wish
+## Personalized Greetings
 
-1. Open the project in your browser.
-2. Click **"Share Wishes 🎁"** in either the winter countdown screen or the celebration screen.
-3. Enter your name (e.g. `Yashraj`).
-4. Click **"Share on WhatsApp"** or copy your unique generated link:
-   ```
-   https://happy-new-year-2027.netlify.app/?from=Yashraj
-   ```
-5. When your friends open your link, they will see a customized greeting from you before stepping into the 3D 2027 fireworks spectacle!
+You can create a personalized greeting link by adding the `?from=` parameter:
+
+```
+https://happy-new-year-2027.netlify.app/?from=YourName
+```
+
+When opened, the experience presents a greeting pill noting who sent the wish before transitioning into the celebration screen.
 
 ---
 
-## 📁 Repository Structure
+## Project Structure
 
 ```
 Happy-New-Year-2027/
-├── index.html           # Main 3D WebGL experience, audio, and SEO tags
-├── start.mp3            # Atmospheric cosmic journey soundtrack
-├── celebration.mp3      # Festive fireworks celebration audio
-├── netlify.toml         # Netlify production configuration & cache headers
-├── robots.txt           # Search and AI crawler directives
-├── sitemap.xml          # XML sitemap for search engine indexing
-├── llms.txt             # Generative Engine Optimization (GEO) manifest
-├── LICENSE              # MIT Open Source License
-└── README.md            # Comprehensive documentation & showcase
+├── index.html           # Main markup, Three.js shaders, styles, and animation logic
+├── start.mp3            # Atmospheric background audio for the opening sequence
+├── celebration.mp3      # Audio track for the fireworks celebration
+├── netlify.toml         # Netlify headers, cache rules, and security policies
+├── robots.txt           # Search engine and crawler instructions
+├── sitemap.xml          # XML sitemap
+├── llms.txt             # Generative Engine Optimization manifest
+├── LICENSE              # MIT License
+└── README.md            # Project documentation
 ```
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/Morningstar777-star/Happy-New-Year-2027/issues).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
-3. Commit your Changes (`git commit -m 'Add awesome feature'`)
-4. Push to the Branch (`git push origin feature/NewFeature`)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -m 'Add improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
 5. Open a Pull Request
 
 ---
 
-## 📄 License
+## License
 
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 💖 Author & Acknowledgements
+## Author
 
-Created with passion by **[Yashraj Patil](https://github.com/Morningstar777-star)**.
-
-*Wishing everyone around the world a peaceful, prosperous, and magnificent **Happy New Year 2027**! ✨*
+Created by [Yashraj Patil](https://github.com/Morningstar777-star).
