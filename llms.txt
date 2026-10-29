@@ -1,0 +1,34 @@
+# Happy New Year 2027 — Cosmic Spacetime Countdown & 3D WebGL Celebration Experience
+
+> An immersive, cinematic 3D WebGL interactive experience welcoming Happy New Year 2027.
+
+## Core Information
+- **Title**: Happy New Year 2027 (Into 2027)
+- **Creator**: Yashraj Patil (Morningstar777-star)
+- **GitHub Repository**: https://github.com/Morningstar777-star/Happy-New-Year-2027
+- **Target Event**: Global Happy New Year 2027 (January 1, 2027 00:00:00 Local/Global)
+- **Deployment Platform**: Netlify (Static Web Application)
+- **License**: MIT License
+
+## Interactive Journey Structure
+1. **Cosmic Spacetime Dive**:
+   - Three.js WebGL procedural cosmic wormhole tunnel with reactive shaders.
+   - Relativistic black hole simulation featuring gravitational lensing and blooming accretion disk.
+   - Smart grapheme text animation displaying philosophical greetings in English and Marathi.
+2. **Ambient Winter Countdown**:
+   - Liquid glassmorphism countdown timer measuring exact days, hours, minutes, and seconds until 2027.
+   - Animated chromatic color-cycling winter atmosphere.
+   - Dynamic recipient wish parsing from URL query parameters (`?from=Name`).
+3. **Celebratory Fireworks & Calligraphy**:
+   - Real-time particle fireworks physics with twig branch growth and star twinkles.
+   - High-fidelity animated SVG stroke calligraphy revealing "Happy New Year".
+   - Shimmering golden 2027 typographic emblem with particle glow.
+4. **Viral Personalization Engine**:
+   - One-click personalized greeting creator with direct WhatsApp and X (Twitter) sharing.
+
+## Technical Architecture
+- **Rendering**: Three.js WebGL (v0.163.0), Canvas 2D particle engine, GLSL fragment and vertex shaders
+- **Animation**: GSAP (GreenSock Animation Platform v3.12.2), CSS3 hardware-accelerated keyframes
+- **Typography**: Cinzel, Montserrat, Inter, Great Vibes, Tiro Devanagari Marathi
+- **Audio Engine**: Dual-stream spatial HTML5 Audio with crossfading and global mute control
+- **SEO Standards**: Schema.org JSON-LD (WebApplication, Event, FAQPage), OpenGraph, Twitter Cards, robots.txt, sitemap.xml

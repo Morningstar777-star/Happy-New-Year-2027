@@ -1,0 +1,19 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Netlify
+.netlify/
+
+# Node / Package logs (if used)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
