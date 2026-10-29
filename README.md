@@ -1,3 +1,7 @@
+<div align="center">
+
+<img src="favicon.svg" alt="Happy New Year 2027 Emblem" width="96" height="96">
+
 # Happy New Year 2027
 
 An interactive 3D WebGL countdown and celebration web experience built with Three.js, GSAP, and HTML5 Canvas.
@@ -9,6 +13,8 @@ An interactive 3D WebGL countdown and celebration web experience built with Thre
 [![Deploy: Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify)](https://www.netlify.com/)
 
 [Live Demo](https://happy-new-year-2027.netlify.app) &bull; [GitHub Repository](https://github.com/Morningstar777-star/Happy-New-Year-2027)
+
+</div>
 
 ---
 
@@ -86,6 +92,10 @@ When opened, the experience presents a greeting pill noting who sent the wish be
 ```
 Happy-New-Year-2027/
 ├── index.html           # Main markup, Three.js shaders, styles, and animation logic
+├── favicon.svg          # Vector Chrono-Nova brand crest
+├── favicon.ico          # Multi-resolution desktop favicon
+├── favicon.png          # High-resolution 512x512 application icon
+├── apple-touch-icon.png # iOS home screen touch icon
 ├── start.mp3            # Atmospheric background audio for the opening sequence
 ├── celebration.mp3      # Audio track for the fireworks celebration
 ├── netlify.toml         # Netlify headers, cache rules, and security policies
