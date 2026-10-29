@@ -33,7 +33,7 @@
     <!-- Favicon (Inline SVG Sparkling Star) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 64,36 98,38 72,60 80,95 50,75 20,95 28,60 2,38 36,36' fill='%23ffd700'/%3E%3C/svg%3E">
 
-    <!-- Schema.org JSON-LD Structured Data for High-Ranking Rich Snippets -->
+    <!-- Schema.org JSON-LD Structured Data for Rich Search Snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -96,7 +96,7 @@
               "name": "When does the New Year 2027 celebration trigger?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The real-time countdown automatically transitions to the grand fireworks celebration when midnight strikes on January 1, 2027, or instantly when you click 'Celebrate 2027 Now!'."
+                "text": "The real-time countdown automatically transitions to the grand fireworks celebration when midnight strikes on January 1, 2027, or instantly when you click 'Celebrate 2027 Now'."
               }
             }
           ]
@@ -107,14 +107,34 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!-- Google Fonts: Premium Typography Matrix (Instrument Serif + Plus Jakarta Sans + Cinzel + Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@300;500;700&family=Great+Vibes&family=Cinzel:wght@700&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
 
     <style>
         /* --- RESET & BASICS --- */
         *, *::after, *::before { box-sizing: border-box; margin: 0; padding: 0; }
-        body { margin: 0; overflow: hidden; background-color: #000; font-family: 'Inter', sans-serif; }
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            background-color: #000000; 
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Editorial Typography Utilities */
+        .font-serif { font-family: 'Instrument Serif', Georgia, serif; }
+        .font-sans { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        
+        .text-gold {
+            background: linear-gradient(135deg, #fff9e6 0%, #ecd08c 35%, #e2b34a 65%, #c78928 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
 
         /* Screen-Reader & Search Engine Indexable Semantic Content */
         .sr-only {
@@ -129,36 +149,114 @@
             border-width: 0;
         }
 
+        /* --- LIQUID GLASS 2.0 (True Bevel Refraction with XOR Dual-Masking) --- */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.03);
+            background-blend-mode: luminosity;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: none;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.16), 0 8px 32px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .liquid-glass::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1.2px;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.5) 0%,
+                rgba(255, 255, 255, 0.18) 25%,
+                rgba(255, 255, 255, 0.02) 50%,
+                rgba(255, 255, 255, 0.15) 75%,
+                rgba(255, 255, 255, 0.45) 100%
+            );
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .liquid-glass-strong {
+            background: rgba(10, 14, 24, 0.72);
+            background-blend-mode: luminosity;
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: none;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75), inset 0 1px 2px rgba(255, 255, 255, 0.22);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .liquid-glass-strong::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1.5px;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.65) 0%,
+                rgba(255, 235, 180, 0.25) 25%,
+                rgba(255, 255, 255, 0.02) 50%,
+                rgba(255, 255, 255, 0.18) 75%,
+                rgba(255, 215, 120, 0.5) 100%
+            );
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
         /* --- FLOATING SOUND TOGGLE PILL --- */
         .sound-toggle-btn {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 24px;
+            right: 24px;
             z-index: 1000;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 9px 18px;
+            gap: 10px;
+            padding: 8px 18px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 500;
             letter-spacing: 0.5px;
             color: #ffffff;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 9999px;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             user-select: none;
             outline: none;
         }
         .sound-toggle-btn:hover {
-            background: rgba(255, 255, 255, 0.22);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.45);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+        }
+        .sound-status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #5ed29c;
+            box-shadow: 0 0 10px #5ed29c;
+            animation: pulseDot 2s ease infinite;
+        }
+        .sound-toggle-btn.muted .sound-status-dot {
+            background: #888888;
+            box-shadow: none;
+            animation: none;
+        }
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+        .sound-icon-svg {
+            display: flex;
+            align-items: center;
+            opacity: 0.9;
         }
 
         /* --- 1. COSMIC LAYERS (First Phase) --- */
@@ -173,38 +271,12 @@
             z-index: 100; pointer-events: none;
         }
         .heading {
-            font-size: clamp(1.5rem, 5vw, 3.5rem); font-weight: 300; color: rgba(255, 255, 255, 0.95);
-            margin: 0; text-align: center; white-space: nowrap; text-shadow: 0 4px 15px rgba(0, 0, 0, 1.0);
+            font-size: clamp(1.6rem, 5vw, 3.8rem); font-weight: 300; color: rgba(255, 255, 255, 0.95);
+            margin: 0; text-align: center; white-space: nowrap; text-shadow: 0 4px 20px rgba(0, 0, 0, 1.0);
+            letter-spacing: -0.5px;
         }
         .char { display: inline-block; will-change: transform, opacity, filter; }
         .marathi-font .char { font-family: 'Tiro Devanagari Marathi', serif; font-weight: 400; display: inline-block; }
-
-        /* Skip Cosmic Button */
-        .cosmic-skip-btn {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 150;
-            padding: 10px 20px;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.85);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-        }
-        .cosmic-skip-btn:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.22);
-            transform: translateY(-2px);
-            border-color: rgba(255, 255, 255, 0.45);
-        }
 
         /* --- 2. AESTHETIC WINTER WRAPPER --- */
         #winter-wrapper {
@@ -222,70 +294,98 @@
         .winter-anim-overlay {
             position: absolute; inset: 0; z-index: 1;
             mix-blend-mode: overlay;
-            animation: colorCycle 10s ease infinite alternate;
+            animation: colorCycle 12s ease infinite alternate;
             pointer-events: none;
         }
 
         @keyframes colorCycle {
-            0% { background-color: #f0f; }   /* Magenta */
-            25% { background-color: #0f0; }  /* Green */
-            50% { background-color: #00f; }  /* Blue */
-            75% { background-color: #f00; }  /* Red */
-            100% { background-color: #ff0; } /* Yellow */
+            0% { background-color: #e0f; }
+            25% { background-color: #0d8; }
+            50% { background-color: #05f; }
+            75% { background-color: #d12; }
+            100% { background-color: #ea1; }
         }
 
         /* Glassmorphism UI Box */
         .glass-box {
             position: relative; z-index: 10;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 24px;
-            padding: 40px 50px; 
+            border-radius: 28px;
+            padding: 44px 52px; 
             min-width: 420px;
-            max-width: 480px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            max-width: 470px;
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
             color: white;
             transition: all 0.3s ease;
         }
 
-        .sender-greeting {
+        .glass-pill-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 14px;
+            border-radius: 9999px;
             margin-bottom: 20px;
-            padding: 10px 18px;
-            font-size: 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .glass-status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #ffd700;
+            box-shadow: 0 0 8px #ffd700;
+        }
+
+        .sender-greeting {
+            margin-bottom: 22px;
+            padding: 10px 20px;
+            font-size: 13.5px;
             color: #ffd700;
-            background: rgba(255, 215, 0, 0.12);
-            border: 1px solid rgba(255, 215, 0, 0.35);
-            border-radius: 30px;
+            border-radius: 9999px;
             text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
             letter-spacing: 0.5px;
-            animation: pulseGold 3s ease-in-out infinite alternate;
-        }
-        @keyframes pulseGold {
-            from { box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
-            to { box-shadow: 0 0 20px rgba(255, 215, 0, 0.45); }
         }
 
         .glass-title {
-            font-size: 17px;
-            text-transform: uppercase; letter-spacing: 3.5px;
-            margin-bottom: 25px; opacity: 0.9; font-weight: 500;
+            font-size: clamp(20px, 3.5vw, 26px);
+            letter-spacing: -0.5px;
+            margin-bottom: 26px;
+            font-weight: 500;
             color: #ffffff;
+            line-height: 1.2;
         }
 
         /* Timer Rows */
         .timer-row {
             display: flex; align-items: baseline; justify-content: center;
-            margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            margin-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             padding-bottom: 10px;
         }
-        .timer-row:last-child { border-bottom: none; margin-bottom: 25px; }
+        .timer-row:last-child { border-bottom: none; margin-bottom: 28px; }
         
-        .big-num { font-size: 50px; font-weight: 700; margin-right: 15px; text-shadow: 0 0 20px rgba(255,255,255,0.4); }
-        .label { font-size: 16px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
+        .big-num { 
+            font-size: 52px; 
+            font-weight: 700; 
+            margin-right: 14px; 
+            font-family: 'Cinzel', serif;
+            letter-spacing: -1px;
+            background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.3); 
+        }
+        .label { 
+            font-size: 13px; 
+            font-weight: 500; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            color: rgba(255, 255, 255, 0.7); 
+        }
         
         /* Buttons inside Glass */
         .glass-btn-group {
@@ -297,59 +397,62 @@
         .primary-btn {
             width: 100%;
             padding: 15px 36px;
-            font-size: 15px;
-            font-weight: 700;
+            font-size: 14px;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #111;
-            background: linear-gradient(135deg, #ffffff 0%, #fff1b0 100%);
+            color: #0b0f19;
+            background: linear-gradient(135deg, #ffffff 0%, #fff2be 50%, #fbd874 100%);
             border: none;
-            border-radius: 50px;
+            border-radius: 9999px;
             cursor: pointer;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
-            transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
         .primary-btn:hover {
-            transform: scale(1.04);
-            box-shadow: 0 0 35px rgba(255, 215, 0, 0.8);
-            background: #ffffff;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.65), inset 0 1px 1px #ffffff;
         }
         .secondary-btn {
             width: 100%;
-            padding: 12px 30px;
-            font-size: 13.5px;
-            font-weight: 600;
+            padding: 13px 30px;
+            font-size: 13px;
+            font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #ffffff;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
+            border-radius: 9999px;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.25s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
         .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.28);
-            transform: scale(1.02);
-            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px) scale(1.01);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         /* --- MOBILE OPTIMIZATION --- */
         @media screen and (max-width: 768px) {
             .glass-box {
                 min-width: unset;
-                width: 85%;
+                width: 88%;
                 max-width: 340px;
-                padding: 30px 22px;
+                padding: 34px 22px;
             }
-            .glass-title { font-size: 13px; margin-bottom: 18px; }
-            .big-num { font-size: 36px; margin-right: 10px; }
-            .label { font-size: 13px; }
+            .glass-title { font-size: 18px; margin-bottom: 20px; }
+            .big-num { font-size: 38px; margin-right: 10px; }
+            .label { font-size: 12px; }
             .primary-btn { padding: 13px 26px; font-size: 13px; }
-            .secondary-btn { padding: 11px 22px; font-size: 12px; }
-            .sound-toggle-btn { top: 15px; right: 15px; padding: 7px 14px; font-size: 12px; }
-            .cosmic-skip-btn { bottom: 15px; right: 15px; padding: 8px 16px; font-size: 12px; }
+            .secondary-btn { padding: 12px 22px; font-size: 12px; }
+            .sound-toggle-btn { top: 16px; right: 16px; padding: 7px 14px; font-size: 12px; }
         }
 
         /* --- 3. CELEBRATION WRAPPER --- */
@@ -452,10 +555,10 @@
             transform: translateY(0) scale(1);
         }
         .year-num {
-            font-family: 'Cinzel', 'Montserrat', serif;
-            font-size: clamp(3.2rem, 9vw, 6.5rem);
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3.2rem, 9vw, 6.8rem);
             font-weight: 700;
-            letter-spacing: clamp(8px, 2.5vw, 18px);
+            letter-spacing: clamp(8px, 2.5vw, 20px);
             background: linear-gradient(135deg, #ffffff 0%, #fff3a8 30%, #ffd700 70%, #ff9500 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -469,14 +572,14 @@
             100% { filter: drop-shadow(0 0 40px rgba(255, 230, 120, 0.95)) drop-shadow(0 0 80px rgba(255, 180, 0, 0.75)); }
         }
         .year-subtitle {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: clamp(0.78rem, 2vw, 1.1rem);
             font-weight: 400;
-            letter-spacing: 2.5px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.92);
             text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
-            max-width: 620px;
+            max-width: 640px;
             margin: 0 auto;
             line-height: 1.6;
         }
@@ -484,11 +587,11 @@
         /* --- CELEBRATION ACTIONS BAR --- */
         .celebration-actions {
             position: fixed;
-            bottom: 30px;
+            bottom: 35px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 15px;
+            gap: 16px;
             z-index: 100;
             opacity: 0;
             transition: opacity 1.2s ease 6s;
@@ -498,165 +601,223 @@
             opacity: 1;
         }
         .action-btn {
-            padding: 13px 28px;
-            font-size: 14px;
+            padding: 13px 30px;
+            font-size: 13px;
             font-weight: 600;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             color: #ffffff;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
+            border-radius: 9999px;
             cursor: pointer;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         .action-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px) scale(1.04);
-            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.35);
-            border-color: rgba(255, 255, 255, 0.55);
+            transform: translateY(-3px) scale(1.03);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7);
         }
 
-        /* --- PERSONALIZED SHARE MODAL --- */
+        /* --- CLASSIC LUXURY PERSONALIZED SHARE MODAL --- */
         .share-modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.78);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             z-index: 2000;
             display: none;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 24px;
         }
         .share-modal-overlay.active {
             display: flex;
         }
         .share-modal {
             position: relative;
-            background: rgba(18, 22, 34, 0.88);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 24px;
-            padding: 35px 30px;
-            max-width: 440px;
+            border-radius: 32px;
+            padding: 44px 38px 40px;
+            max-width: 460px;
             width: 100%;
             color: #ffffff;
             text-align: center;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 40px rgba(255, 215, 0, 0.2);
-            animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 50px rgba(255, 215, 0, 0.12);
+            animation: modalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         @keyframes modalIn {
-            from { opacity: 0; transform: scale(0.92) translateY(20px); }
+            from { opacity: 0; transform: scale(0.94) translateY(24px); }
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
+
+        /* Ambient Glow Orb inside Modal */
+        .modal-glow-orb {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+            mix-blend-mode: screen;
+            filter: blur(20px);
+        }
+
+        .modal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            margin-bottom: 16px;
+        }
+        .badge-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #ffd700;
+            box-shadow: 0 0 6px #ffd700;
+        }
+
         .modal-close-btn {
             position: absolute;
-            top: 15px; right: 20px;
-            background: transparent;
-            border: none;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 28px;
-            line-height: 1;
+            top: 20px; right: 22px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            transition: color 0.2s;
-            margin: 0;
-            padding: 0;
+            transition: all 0.25s ease;
             box-shadow: none;
         }
         .modal-close-btn:hover {
             color: #ffffff;
-            background: transparent;
-            transform: none;
-            box-shadow: none;
+            background: rgba(255, 255, 255, 0.15);
+            transform: rotate(90deg);
+            border-color: rgba(255, 255, 255, 0.35);
         }
         .modal-title {
-            font-family: 'Cinzel', 'Montserrat', serif;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #ffffff 0%, #ffd700 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: clamp(22px, 4vw, 26px);
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            line-height: 1.25;
+            color: #ffffff;
         }
         .modal-desc {
-            font-size: 13.5px;
-            color: rgba(255, 255, 255, 0.75);
-            margin-bottom: 22px;
-            line-height: 1.5;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.72);
+            margin-bottom: 26px;
+            line-height: 1.55;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .modal-input-group {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
-        .modal-input-group input {
+        .input-wrapper {
+            border-radius: 9999px;
+            padding: 3px;
+            background: rgba(255, 255, 255, 0.04);
+            transition: all 0.3s ease;
+        }
+        .input-wrapper:focus-within {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+        }
+        .input-wrapper input {
             width: 100%;
-            padding: 14px 20px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 50px;
+            padding: 14px 22px;
+            background: transparent;
+            border: none;
             color: #ffffff;
             font-size: 15px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             text-align: center;
             outline: none;
-            transition: border-color 0.3s, box-shadow 0.3s;
+            letter-spacing: 0.5px;
         }
-        .modal-input-group input:focus {
-            border-color: #ffd700;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
+        .input-wrapper input::placeholder {
+            color: rgba(255, 255, 255, 0.35);
         }
+
         .modal-share-actions {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
         .share-btn {
             width: 100%;
-            padding: 13px 20px;
-            font-size: 14px;
+            padding: 13px 22px;
+            font-size: 13.5px;
             font-weight: 600;
             letter-spacing: 1px;
-            border: none;
-            border-radius: 50px;
+            border-radius: 9999px;
             cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
-            display: flex;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
             justify-content: center;
             align-items: center;
+            gap: 10px;
+            text-decoration: none;
         }
-        .whatsapp-btn {
-            background: #25D366;
+        
+        /* Classic Refined WhatsApp Button */
+        .luxury-btn-whatsapp {
+            background: linear-gradient(135deg, #1bd760 0%, #17ab4c 100%);
             color: #ffffff;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+            border: none;
+            box-shadow: 0 8px 25px rgba(27, 215, 96, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
         }
-        .whatsapp-btn:hover { background: #22bf5b; transform: scale(1.02); }
-        .x-btn {
-            background: #000000;
+        .luxury-btn-whatsapp:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(27, 215, 96, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+            background: linear-gradient(135deg, #22e369 0%, #17ab4c 100%);
+        }
+
+        /* Classic Refined X Button */
+        .luxury-btn-x {
             color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
-        .x-btn:hover { background: #111111; transform: scale(1.02); }
-        .copy-btn {
-            background: rgba(255, 255, 255, 0.15);
+        .luxury-btn-x:hover {
+            transform: translateY(-2px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Classic Refined Copy Button */
+        .luxury-btn-copy {
             color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        .copy-btn:hover { background: rgba(255, 255, 255, 0.25); transform: scale(1.02); }
+        .luxury-btn-copy:hover {
+            transform: translateY(-2px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
         .copy-feedback {
-            margin-top: 12px;
+            margin-top: 14px;
             font-size: 13px;
-            color: #69f0ae;
+            color: #5ed29c;
             min-height: 18px;
             font-weight: 500;
         }
 
-        /* Helpers */
+        /* Flash */
         #white-flash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 999; opacity: 0; pointer-events: none; }
     </style>
 
@@ -705,10 +866,16 @@
         </footer>
     </main>
 
-    <!-- Floating Sound Control -->
-    <button id="soundToggleBtn" class="sound-toggle-btn" aria-label="Toggle Sound">
-        <span id="soundIcon">🔊</span>
-        <span id="soundText">Sound On</span>
+    <!-- Floating Sound Control (Liquid Glass 2.0) -->
+    <button id="soundToggleBtn" class="sound-toggle-btn liquid-glass" aria-label="Toggle Sound">
+        <span class="sound-status-dot"></span>
+        <span id="soundIcon" class="sound-icon-svg">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+        </span>
+        <span id="soundText" class="sound-text">Sound <span class="font-serif italic font-normal">On</span></span>
     </button>
 
     <!-- Local Audio Elements -->
@@ -727,20 +894,31 @@
         <div id="tunnel-container"><canvas id="tunnel-canvas"></canvas></div>
         <div id="blackhole-container"></div>
         <div id="text-overlay"><h1 class="heading" id="text-target"></h1></div>
-        <button id="skipCosmicBtn" class="cosmic-skip-btn">Skip to 2027 Countdown ⏭️</button>
     </div>
 
     <!-- Phase 2: Ambient Winter Countdown -->
     <div id="winter-wrapper">
         <div class="winter-anim-overlay"></div>
         
-        <div class="glass-box">
-            <div id="sender-greeting" class="sender-greeting" style="display:none;"></div>
-            <div class="glass-title">Countdown to 2027</div>
+        <div class="glass-box liquid-glass-strong">
+            <div id="sender-greeting" class="sender-greeting liquid-glass" style="display:none;"></div>
+            <div class="glass-pill-header">
+                <span class="glass-status-dot"></span>
+                <span class="glass-tagline">CELESTIAL TRANSITION</span>
+            </div>
+            <div class="glass-title font-sans">
+                Countdown to <span class="font-serif italic font-normal text-gold">2027</span>
+            </div>
             <div id="countdown">Loading...</div>
             <div class="glass-btn-group">
-                <button id="triggerBtn" class="primary-btn">Celebrate 2027 Now! 🎆</button>
-                <button id="openShareBtnWinter" class="secondary-btn">Share Wishes 🎁</button>
+                <button id="triggerBtn" class="primary-btn">
+                    <span>Celebrate 2027 Now</span>
+                    <span>✨</span>
+                </button>
+                <button id="openShareBtnWinter" class="secondary-btn liquid-glass">
+                    <span>Share Wishes</span>
+                    <span>🎁</span>
+                </button>
             </div>
         </div>
     </div>
@@ -780,43 +958,124 @@
             <!-- Radiant 2027 Golden Badge -->
             <div id="celebrationYearBadge" class="celebration-year-badge">
                 <div class="year-num">2027</div>
-                <p class="year-subtitle">May your year be filled with light, happiness & boundless success ✨</p>
+                <p class="year-subtitle">May your year be filled with <span class="font-serif italic font-normal text-gold">light, peace</span> & boundless success ✨</p>
             </div>
         </div>
 
         <!-- Celebration Action Buttons -->
         <div id="celebrationActions" class="celebration-actions">
-            <button id="openShareBtnCel" class="action-btn">Share Wishes 🎁</button>
-            <button id="replayBtn" class="action-btn">Replay 🔄</button>
+            <button id="openShareBtnCel" class="action-btn liquid-glass">
+                <span>Share Wishes</span>
+                <span>🎁</span>
+            </button>
+            <button id="replayBtn" class="action-btn liquid-glass">
+                <span>Replay</span>
+                <span>🔄</span>
+            </button>
         </div>
     </div>
 
-    <!-- Personalized Wish Share Modal -->
+    <!-- Classic Luxury Personalized Wish Share Modal (Liquid Glass 2.0) -->
     <div id="shareModalOverlay" class="share-modal-overlay">
-        <div class="share-modal">
-            <button id="closeShareModal" class="modal-close-btn" aria-label="Close Modal">&times;</button>
-            <h3 class="modal-title">Send Personalized 2027 Greeting</h3>
-            <p class="modal-desc">Enter your name to generate a custom greeting link to surprise your friends and family!</p>
+        <div class="share-modal liquid-glass-strong">
+            <div class="modal-glow-orb"></div>
+            
+            <button id="closeShareModal" class="modal-close-btn" aria-label="Close Modal">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            
+            <div class="modal-badge">
+                <span class="badge-dot"></span>
+                <span>EXCLUSIVE GREETING</span>
+            </div>
+
+            <h3 class="modal-title font-sans">
+                Send <span class="font-serif italic font-normal text-gold">Personalized</span> 2027 Greeting
+            </h3>
+            
+            <p class="modal-desc">
+                Craft an exquisite 3D cosmic greeting card with your name to surprise your loved ones worldwide.
+            </p>
+            
             <div class="modal-input-group">
-                <input type="text" id="senderNameInput" placeholder="Your Name (e.g. Yash)" maxlength="30" autocomplete="off" />
+                <div class="input-wrapper liquid-glass">
+                    <input type="text" id="senderNameInput" placeholder="Enter your name (e.g. Yash)" maxlength="30" autocomplete="off" />
+                </div>
             </div>
+            
             <div class="modal-share-actions">
-                <button id="shareWhatsAppBtn" class="share-btn whatsapp-btn">
-                    <span>💬 Share on WhatsApp</span>
+                <button id="shareWhatsAppBtn" class="share-btn luxury-btn-whatsapp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.772.84 2.788.84 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.766-5.766-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.745 0-3.38-.456-4.81-1.251l-5.19 1.359 1.385-5.062c-.89-1.488-1.385-3.218-1.385-5.046 0-5.514 4.486-10 10-10s10 4.486 10 10z"/></svg>
+                    <span>Share on WhatsApp</span>
                 </button>
-                <button id="shareXBtn" class="share-btn x-btn">
-                    <span>🐦 Share on X (Twitter)</span>
+                <button id="shareXBtn" class="share-btn luxury-btn-x liquid-glass">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <span>Share on X (Twitter)</span>
                 </button>
-                <button id="copyLinkBtn" class="share-btn copy-btn">
-                    <span id="copyBtnText">📋 Copy Link</span>
+                <button id="copyLinkBtn" class="share-btn luxury-btn-copy liquid-glass">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    <span id="copyBtnText">Copy Shareable Link</span>
                 </button>
             </div>
+            
             <p id="copyFeedback" class="copy-feedback"></p>
         </div>
     </div>
 
     <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Zero-Asset Tactile Web Audio Synthesizer (Micro-Interactions) -->
+    <script>
+        class TactileSoundEngine {
+            constructor() {
+                this.ctx = null;
+            }
+            init() {
+                if (!this.ctx && typeof window !== "undefined") {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    this.ctx = new AudioCtx();
+                }
+            }
+            playMechanicalClick() {
+                try {
+                    this.init();
+                    if (!this.ctx) return;
+                    if (this.ctx.state === "suspended") this.ctx.resume();
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = "sine";
+                    osc.frequency.setValueAtTime(850, this.ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(65, this.ctx.currentTime + 0.035);
+                    gain.gain.setValueAtTime(0.08, this.ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.035);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start();
+                    osc.stop(this.ctx.currentTime + 0.035);
+                } catch(e) {}
+            }
+            playGlassResonance() {
+                try {
+                    this.init();
+                    if (!this.ctx) return;
+                    if (this.ctx.state === "suspended") this.ctx.resume();
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = "triangle";
+                    osc.frequency.setValueAtTime(1450, this.ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(800, this.ctx.currentTime + 0.12);
+                    gain.gain.setValueAtTime(0.04, this.ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.12);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start();
+                    osc.stop(this.ctx.currentTime + 0.12);
+                } catch(e) {}
+            }
+        }
+        window.tactileSound = new TactileSoundEngine();
+    </script>
 
     <!-- Three.js Cosmic Background Module -->
     <script type="module">
@@ -834,7 +1093,6 @@
         const bgAudio = document.getElementById('start-audio');
         const celAudio = document.getElementById('celebration-audio');
         const soundToggleBtn = document.getElementById('soundToggleBtn');
-        const soundIcon = document.getElementById('soundIcon');
         const soundText = document.getElementById('soundText');
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -851,17 +1109,18 @@
 
             soundToggleBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
+                window.tactileSound.playMechanicalClick();
                 isAudioMuted = !isAudioMuted;
                 if (isAudioMuted) {
                     bgAudio.muted = true;
                     celAudio.muted = true;
-                    soundIcon.textContent = '🔇';
-                    soundText.textContent = 'Muted';
+                    soundToggleBtn.classList.add('muted');
+                    soundText.innerHTML = 'Sound <span class="font-serif italic font-normal">Muted</span>';
                 } else {
                     bgAudio.muted = false;
                     celAudio.muted = false;
-                    soundIcon.textContent = '🔊';
-                    soundText.textContent = 'Sound On';
+                    soundToggleBtn.classList.remove('muted');
+                    soundText.innerHTML = 'Sound <span class="font-serif italic font-normal">On</span>';
                     if (document.getElementById('celebration-wrapper').classList.contains('active')) {
                         celAudio.play().catch(e => console.log(e));
                     } else if (document.getElementById('cosmic-wrapper').style.display !== 'none' || document.getElementById('winter-wrapper').classList.contains('active')) {
@@ -947,12 +1206,6 @@
             }
         }
         animateText();
-
-        // Skip button handler
-        document.getElementById('skipCosmicBtn').addEventListener('click', () => {
-            if (winterTriggerTimeout) clearTimeout(winterTriggerTimeout);
-            triggerWinterArrival();
-        });
 
         // --- PART B: TRANSITION SEQUENCE ---
         function startBlackHoleDive() {
@@ -1209,6 +1462,7 @@
             // Trigger Button Listener
             const triggerBtn = document.getElementById('triggerBtn');
             triggerBtn.addEventListener('click', () => {
+                window.tactileSound.playMechanicalClick();
                 clearInterval(timerInterval);
                 triggerCelebration();
             });
@@ -1260,6 +1514,7 @@
 
         // Replay Button Listener
         document.getElementById('replayBtn').addEventListener('click', () => {
+            window.tactileSound.playMechanicalClick();
             window.location.reload();
         });
     </script>
@@ -1641,7 +1896,7 @@
         };
     </script>
 
-    <!-- Viral Personalized Greeting Modal Script -->
+    <!-- Viral Personalized Greeting Modal Script with Tactile Audio Feedback -->
     <script>
         const shareModalOverlay = document.getElementById('shareModalOverlay');
         const closeShareModal = document.getElementById('closeShareModal');
@@ -1653,20 +1908,23 @@
         const copyFeedback = document.getElementById('copyFeedback');
 
         const openShareModal = () => {
+            window.tactileSound.playGlassResonance();
             shareModalOverlay.classList.add('active');
             copyFeedback.textContent = '';
-            setTimeout(() => senderNameInput.focus(), 100);
+            setTimeout(() => senderNameInput.focus(), 150);
         };
 
         document.getElementById('openShareBtnWinter').addEventListener('click', openShareModal);
         document.getElementById('openShareBtnCel').addEventListener('click', openShareModal);
 
         closeShareModal.addEventListener('click', () => {
+            window.tactileSound.playMechanicalClick();
             shareModalOverlay.classList.remove('active');
         });
 
         shareModalOverlay.addEventListener('click', (e) => {
             if(e.target === shareModalOverlay) {
+                window.tactileSound.playMechanicalClick();
                 shareModalOverlay.classList.remove('active');
             }
         });
@@ -1681,15 +1939,17 @@
         }
 
         shareWhatsAppBtn.addEventListener('click', () => {
+            window.tactileSound.playMechanicalClick();
             const url = getPersonalizedUrl();
             const name = senderNameInput.value.trim();
             const greetingMsg = name 
-                ? `✨ Hey! ${name} sent you a magical 3D Happy New Year 2027 countdown and fireworks experience! 🎆 Tap here to open your surprise greeting: ${url}`
-                : `✨ Experience this magical 3D Happy New Year 2027 cosmic countdown and fireworks celebration! 🎆 Tap to open: ${url}`;
+                ? `✨ Hey! ${name} sent you an exclusive 3D Happy New Year 2027 cosmic countdown and fireworks experience! 🎆 Tap here to open your surprise greeting: ${url}`
+                : `✨ Experience this magnificent 3D Happy New Year 2027 cosmic countdown and celebration! 🎆 Tap to open: ${url}`;
             window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(greetingMsg)}`, '_blank');
         });
 
         shareXBtn.addEventListener('click', () => {
+            window.tactileSound.playMechanicalClick();
             const url = getPersonalizedUrl();
             const name = senderNameInput.value.trim();
             const text = name 
@@ -1699,12 +1959,13 @@
         });
 
         copyLinkBtn.addEventListener('click', () => {
+            window.tactileSound.playMechanicalClick();
             const url = getPersonalizedUrl();
             navigator.clipboard.writeText(url).then(() => {
-                copyBtnText.textContent = '✅ Copied to Clipboard!';
-                copyFeedback.textContent = 'Link copied! Send it to your friends on WhatsApp or Instagram!';
+                copyBtnText.textContent = 'Link Copied to Clipboard!';
+                copyFeedback.textContent = '✨ Link ready! Paste it into WhatsApp, Instagram, or iMessage!';
                 setTimeout(() => {
-                    copyBtnText.textContent = '📋 Copy Link';
+                    copyBtnText.textContent = 'Copy Shareable Link';
                 }, 3000);
             }).catch(() => {
                 copyFeedback.textContent = 'Failed to copy link. Please copy the URL manually.';
