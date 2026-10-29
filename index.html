@@ -293,6 +293,8 @@
             background-position: center;
             transition: opacity 2s ease;
             display: flex; justify-content: center; align-items: center;
+            padding: 24px;
+            box-sizing: border-box;
         }
         #winter-wrapper.active { pointer-events: auto; }
 
@@ -311,20 +313,23 @@
             100% { background-color: #ea1; }
         }
 
-        /* Glassmorphism UI Box (Original Cute & Compact) */
+        /* Glassmorphism UI Box (Cute, Compact Floating Rectangle) */
         .glass-box {
             position: relative; z-index: 10;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 24px;
             
-            /* Desktop Default */
-            padding: 40px 60px; 
-            min-width: 400px;
+            /* Responsive Floating Dimensions with safe clearance */
+            padding: 26px 38px; 
+            width: 88%;
+            max-width: 350px;
+            box-sizing: border-box;
+            margin: auto;
             
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.2);
             text-align: center;
             font-family: 'Montserrat', sans-serif;
             color: white;
@@ -332,44 +337,44 @@
         }
 
         .glass-title {
-            font-size: 16px;
-            text-transform: uppercase; letter-spacing: 3px;
-            margin-bottom: 30px; opacity: 0.8; font-weight: 300;
+            font-size: 13px;
+            text-transform: uppercase; letter-spacing: 2.5px;
+            margin-bottom: 18px; opacity: 0.85; font-weight: 300;
         }
 
         /* Timer Rows */
         .timer-row {
             display: flex; align-items: baseline; justify-content: center;
-            margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 10px;
+            margin-bottom: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 6px;
         }
-        .timer-row:last-child { border-bottom: none; margin-bottom: 25px; }
+        .timer-row:last-child { border-bottom: none; margin-bottom: 16px; }
         
-        .big-num { font-size: 50px; font-weight: 700; margin-right: 15px; text-shadow: 0 0 20px rgba(255,255,255,0.3); }
-        .label { font-size: 16px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
+        .big-num { font-size: clamp(30px, 4.2vh, 42px); font-weight: 700; margin-right: 12px; text-shadow: 0 0 20px rgba(255,255,255,0.3); }
+        .label { font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
         
         /* The Button inside Glass */
         .glass-box button {
-            margin-top: 15px;
-            padding: 15px 40px; font-size: 16px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;
-            color: #333; background: rgba(255,255,255,0.9); border: none;
-            border-radius: 50px; cursor: pointer; box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            margin-top: 8px;
+            padding: 12px 32px; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;
+            color: #222; background: rgba(255,255,255,0.92); border: none;
+            border-radius: 50px; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
             transition: transform 0.2s, background 0.2s;
         }
-        .glass-box button:hover { background: white; transform: scale(1.05); box-shadow: 0 0 30px rgba(255,255,255,0.6); }
+        .glass-box button:hover { background: white; transform: scale(1.04); box-shadow: 0 0 25px rgba(255,255,255,0.7); }
 
-        /* --- MOBILE OPTIMIZATION (FIXED WIDTH) --- */
+        /* --- MOBILE OPTIMIZATION --- */
         @media screen and (max-width: 768px) {
             .glass-box {
-                min-width: unset;
-                width: 75%;
-                max-width: 320px;
-                padding: 30px 20px;
+                width: 82%;
+                max-width: 300px;
+                padding: 20px 18px;
+                border-radius: 20px;
             }
-            .glass-title { font-size: 12px; margin-bottom: 20px; }
-            .big-num { font-size: 35px; margin-right: 10px; }
-            .label { font-size: 12px; }
-            .glass-box button { padding: 12px 30px; font-size: 14px; }
+            .glass-title { font-size: 11px; margin-bottom: 14px; }
+            .big-num { font-size: 30px; margin-right: 10px; }
+            .label { font-size: 11px; }
+            .glass-box button { padding: 10px 24px; font-size: 12px; }
             .sound-toggle-btn { top: 16px; right: 16px; padding: 7px 14px; font-size: 12px; }
         }
 
@@ -887,11 +892,6 @@
             <button id="closeShareModal" class="modal-close-btn" aria-label="Close Modal">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </button>
-            
-            <div class="modal-badge">
-                <span class="badge-dot"></span>
-                <span>EXCLUSIVE GREETING</span>
-            </div>
 
             <h3 class="modal-title font-sans">
                 Send <span class="font-serif italic font-normal text-gold">Personalized</span> 2027 Greeting
