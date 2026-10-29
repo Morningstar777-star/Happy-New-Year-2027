@@ -1,67 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
   <defs>
-    <!-- Background Radial Gradients -->
+    <!-- Background Gradients -->
     <radialGradient id="bg-nebula" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.95" />
-      <stop offset="35%" stop-color="#090d16" stop-opacity="0.98" />
+      <stop offset="0%" stop-color="#0f1d38" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#070c18" stop-opacity="0.98" />
       <stop offset="100%" stop-color="#020408" stop-opacity="1" />
     </radialGradient>
 
     <!-- Starfield Grid Pattern -->
     <pattern id="celestial-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.35" />
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.35" />
       <circle cx="48" cy="48" r="1.2" fill="#38bdf8" fill-opacity="0.45" />
     </pattern>
 
-    <!-- 3D Gold Crystalline Facet Gradients (For 2027 & Accents) -->
+    <!-- 3D Gold Crystalline Facet Gradients for 2027 -->
+    <!-- Top Face: Brilliant Champagne Highlight -->
     <linearGradient id="gold-top" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fffbeb" />
-      <stop offset="50%" stop-color="#fef08a" />
-      <stop offset="100%" stop-color="#fde047" />
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#fffbeb" />
+      <stop offset="100%" stop-color="#fef08a" />
     </linearGradient>
 
+    <!-- Front Face: Radiant Royal Gold -->
     <linearGradient id="gold-front" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fbbf24" />
-      <stop offset="50%" stop-color="#d97706" />
-      <stop offset="100%" stop-color="#92400e" />
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="35%" stop-color="#eab308" />
+      <stop offset="75%" stop-color="#ca8a04" />
+      <stop offset="100%" stop-color="#a16207" />
     </linearGradient>
 
+    <!-- Side Face: Deep Isometric Extrusion Bronze-Amber -->
     <linearGradient id="gold-side" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="0%" stop-color="#a16207" />
+      <stop offset="50%" stop-color="#713f12" />
       <stop offset="100%" stop-color="#451a03" />
     </linearGradient>
 
-    <!-- 3D Ice-Cyan Crystalline Facet Gradients -->
-    <linearGradient id="cyan-top" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f0fdf4" />
-      <stop offset="50%" stop-color="#a7f3d0" />
-      <stop offset="100%" stop-color="#38bdf8" />
+    <!-- Quantum Laser EKG Gradient -->
+    <linearGradient id="laser-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="45%" stop-color="#fbbf24" stop-opacity="1" />
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="70%" stop-color="#10b981" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
     </linearGradient>
 
-    <linearGradient id="cyan-front" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#0284c7" />
-      <stop offset="100%" stop-color="#0369a1" />
-    </linearGradient>
-
-    <linearGradient id="cyan-side" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0369a1" />
-      <stop offset="100%" stop-color="#082f49" />
-    </linearGradient>
-
-    <!-- Kinetic Laser Pulse Gradient -->
-    <linearGradient id="laser-pulse-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0" />
-      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.7" />
-      <stop offset="50%" stop-color="#fbbf24" stop-opacity="1" />
-      <stop offset="80%" stop-color="#34d399" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- Glow Filters -->
-    <filter id="super-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="blur1" />
-      <feGaussianBlur stdDeviation="18" result="blur2" />
+    <!-- Volumetric Glow Filters -->
+    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur1" />
+      <feGaussianBlur stdDeviation="24" result="blur2" />
       <feMerge>
         <feMergeNode in="blur2" />
         <feMergeNode in="blur1" />
@@ -69,7 +57,7 @@
       </feMerge>
     </filter>
 
-    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="laser-glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -77,237 +65,177 @@
       </feMerge>
     </filter>
 
-    <!-- Capsule Badge Gradient -->
-    <linearGradient id="badge-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Status Pill Glass Gradients -->
+    <linearGradient id="pill-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.9" />
     </linearGradient>
-    <linearGradient id="badge-rim" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="pill-border" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.6" />
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#34d399" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.6" />
     </linearGradient>
+
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.18; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.08); }
+      }
+      @keyframes laserDash {
+        0% { stroke-dashoffset: 1200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes blinkDot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.85); }
+      }
+      @keyframes float3D {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      .anim-glow { transform-origin: center; animation: pulseGlow 6s ease-in-out infinite; }
+      .anim-laser { stroke-dasharray: 300 900; animation: laserDash 5s linear infinite; }
+      .anim-dot { transform-origin: 472px 42px; animation: blinkDot 1.8s ease-in-out infinite; }
+      .anim-digits { animation: float3D 4s ease-in-out infinite; }
+    </style>
   </defs>
 
-  <!-- Base Obsidian Canvas -->
-  <rect width="1200" height="420" fill="url(#bg-nebula)" />
-  <rect width="1200" height="420" fill="url(#celestial-grid)" />
+  <!-- ============================================================ -->
+  <!-- 1. VIEWPORT BASE & ATMOSPHERE                                -->
+  <!-- ============================================================ -->
+  <rect width="1200" height="380" fill="url(#bg-nebula)" />
+  <rect width="1200" height="380" fill="url(#celestial-grid)" />
 
-  <!-- Ambient Light Orbs (Breathing Nebula Depth) -->
-  <circle cx="600" cy="180" r="260" fill="#f59e0b" opacity="0.12" filter="url(#super-glow)">
-    <animate attributeName="opacity" values="0.08;0.16;0.08" dur="6s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="340" cy="200" r="210" fill="#0284c7" opacity="0.15" filter="url(#super-glow)">
-    <animate attributeName="opacity" values="0.12;0.19;0.12" dur="7s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="860" cy="200" r="210" fill="#10b981" opacity="0.11" filter="url(#super-glow)">
-    <animate attributeName="opacity" values="0.08;0.15;0.08" dur="8s" repeatCount="indefinite" />
-  </circle>
+  <!-- Dual Ambient Gaussian Nebulae Orbs -->
+  <circle cx="360" cy="180" r="220" fill="#0284c7" class="anim-glow" filter="url(#neon-glow)" />
+  <circle cx="840" cy="180" r="200" fill="#d97706" class="anim-glow" filter="url(#neon-glow)" style="animation-delay: -3s;" />
+  <circle cx="600" cy="200" r="160" fill="#10b981" opacity="0.12" filter="url(#neon-glow)" />
 
-  <!-- Twinkling Starfield Constellation Nodes -->
-  <g id="twinkling-stars">
-    <circle cx="120" cy="70" r="1.8" fill="#ffffff"><animate attributeName="opacity" values="0.2;1;0.2" dur="3.2s" repeatCount="indefinite" /></circle>
-    <circle cx="280" cy="45" r="1.4" fill="#fde047"><animate attributeName="opacity" values="0.8;0.1;0.8" dur="2.8s" repeatCount="indefinite" /></circle>
-    <circle cx="450" cy="80" r="2.0" fill="#38bdf8"><animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.1s" repeatCount="indefinite" /></circle>
-    <circle cx="750" cy="65" r="1.6" fill="#ffffff"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.5s" repeatCount="indefinite" /></circle>
-    <circle cx="920" cy="90" r="2.2" fill="#34d399"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.9s" repeatCount="indefinite" /></circle>
-    <circle cx="1080" cy="60" r="1.5" fill="#fde047"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.4s" repeatCount="indefinite" /></circle>
-    <circle cx="180" cy="360" r="1.7" fill="#38bdf8"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.6s" repeatCount="indefinite" /></circle>
-    <circle cx="1020" cy="340" r="2.0" fill="#ffffff"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="4.5s" repeatCount="indefinite" /></circle>
-  </g>
-
-  <!-- Orbiting Celestial Spacetime Rings (Rotating Relativistic Chronograph) -->
-  <g transform="translate(600, 200)">
-    <!-- Outer dashed chronometer orbit -->
-    <circle cx="0" cy="0" r="190" fill="none" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="6 8" opacity="0.32">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="40s" repeatCount="indefinite" />
-    </circle>
-    <!-- Counter-rotating cyan coordinate ring -->
-    <ellipse cx="0" cy="0" rx="230" ry="110" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="12 10 4 10" opacity="0.28">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="32s" repeatCount="indefinite" />
-    </ellipse>
-    <!-- Inclined golden halo ring -->
-    <ellipse cx="0" cy="0" rx="270" ry="85" fill="none" stroke="#ffd700" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.22" transform="rotate(-25)">
-      <animateTransform attributeName="transform" type="rotate" from="-25" to="335" dur="48s" repeatCount="indefinite" />
-    </ellipse>
+  <!-- Concentric Astrolabe Coordinate Rings behind Numerals -->
+  <g opacity="0.22" transform="translate(600, 195)">
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="6 8" />
+    <circle cx="0" cy="0" r="205" fill="none" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3 9" />
+    <circle cx="0" cy="0" r="250" fill="none" stroke="#10b981" stroke-width="0.5" />
   </g>
 
   <!-- ============================================================ -->
-  <!-- TOP STATUS BADGE: LUXURY CELESTIAL PILL                      -->
+  <!-- 2. STATUS PILL BADGE: 2027 MULTIVERSE ODYSSEY                -->
   <!-- ============================================================ -->
-  <g transform="translate(600, 38)" text-anchor="middle">
-    <!-- Capsule Body -->
-    <rect x="-240" y="-16" width="480" height="32" rx="16" fill="url(#badge-glass)" stroke="url(#badge-rim)" stroke-width="1.2" filter="url(#soft-glow)" />
-    
-    <!-- Pulsing Live Dot -->
-    <circle cx="-212" cy="0" r="5" fill="#ffd700" filter="url(#soft-glow)">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
-      <animate attributeName="r" values="4;5.5;4" dur="2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="-212" cy="0" r="2.5" fill="#ffffff" />
-
-    <!-- Badge Text -->
-    <text x="0" y="4.5" font-family="system-ui, -apple-system, 'Segoe UI', Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="2.8" fill="#e2e8f0">
-      CELESTIAL CHRONOMETER • 3D WEBGL MULTIVERSE
+  <g transform="translate(600, 42)">
+    <!-- Pill Container -->
+    <rect x="-145" y="-14" width="290" height="28" rx="14" 
+          fill="url(#pill-bg)" stroke="url(#pill-border)" stroke-width="1.2" />
+    <!-- Pulsing Luminous Indicator Dot -->
+    <circle cx="-120" cy="0" r="4.5" fill="#fbbf24" class="anim-dot" filter="url(#laser-glow)" />
+    <!-- Pill Text -->
+    <text x="6" y="4.5" text-anchor="middle" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Inter, sans-serif" 
+          font-size="10.5" font-weight="700" letter-spacing="2.5" fill="#f8fafc">
+      2027 MULTIVERSE ODYSSEY
     </text>
   </g>
 
   <!-- ============================================================ -->
-  <!-- EDITORIAL HEADER: "HAPPY NEW YEAR"                           -->
+  <!-- 3. EDITORIAL SERIF HEADER: "HAPPY NEW YEAR"                  -->
   <!-- ============================================================ -->
-  <g transform="translate(600, 115)" text-anchor="middle">
-    <!-- Deep Drop Glow -->
-    <text x="0" y="0" font-family="'Cinzel', Georgia, serif" font-size="44" font-weight="800" letter-spacing="14" fill="#000000" opacity="0.8" />
-    
-    <!-- Gold Extrusion Reflection -->
-    <text x="1.5" y="1.5" font-family="'Cinzel', Georgia, serif" font-size="44" font-weight="800" letter-spacing="14" fill="#78350f" opacity="0.9" />
-    
-    <!-- Vibrant Front Face -->
-    <text x="0" y="0" font-family="'Cinzel', Georgia, serif" font-size="44" font-weight="800" letter-spacing="14" fill="url(#gold-top)" filter="url(#soft-glow)">
-      HAPPY NEW YEAR
-    </text>
-  </g>
+  <text x="600" y="108" text-anchor="middle" 
+        font-family="'Cinzel', 'Times New Roman', Georgia, serif" 
+        font-size="28" font-weight="800" letter-spacing="12" fill="url(#gold-top)" filter="url(#laser-glow)">
+    HAPPY NEW YEAR
+  </text>
 
   <!-- ============================================================ -->
-  <!-- 3D ISOMETRIC EXTRUDED CENTERPIECE: "2 0 2 7"                 -->
+  <!-- 4. 3D ISOMETRIC EXTRUDED NUMERALS: "2 0 2 7"                 -->
   <!-- ============================================================ -->
-  <!-- Digit Dimensions: Width ~88px, Height ~115px, Extrusion dx=16, dy=-16 -->
-  <!-- Layout: 4 digits spaced horizontally across x: 310, 450, 590, 730 -->
-  <g transform="translate(90, 125)" id="isometric-year">
+  <!-- Digits horizontally centered at x: 280, 450, 620, 790        -->
+  <g class="anim-digits" id="isometric-2027">
 
-    <!-- ---------------------------------------------------- -->
-    <!-- DIGIT 1: '2' (Gold Facet Extrusion)                  -->
-    <!-- ---------------------------------------------------- -->
-    <g transform="translate(240, 0)">
+    <!-- ==================== DIGIT 1: '2' ==================== -->
+    <g transform="translate(260, 130)">
       <!-- Top Bevel Highlight (Top Bar) -->
-      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#gold-top)" stroke="#78350f" stroke-width="1.2" />
-      
-      <!-- Right Side Extrusion (Top Arch) -->
-      <polygon points="88,0 104,-16 104,24 88,40" fill="url(#gold-side)" stroke="#78350f" stroke-width="1.2" />
-      
-      <!-- Right Side Extrusion (Bottom Bar) -->
-      <polygon points="88,90 104,74 104,98 88,114" fill="url(#gold-side)" stroke="#78350f" stroke-width="1.2" />
-      
+      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#gold-top)" stroke="#713f12" stroke-width="1.2" />
       <!-- Mid Step Top Bevel -->
-      <polygon points="0,90 16,74 104,74 88,90" fill="url(#gold-top)" stroke="#78350f" stroke-width="1.2" />
-      
+      <polygon points="0,80 16,64 104,64 88,80" fill="url(#gold-top)" stroke="#713f12" stroke-width="1.2" />
+      <!-- Right Side Extrusions -->
+      <polygon points="88,0 104,-16 104,24 88,40" fill="url(#gold-side)" stroke="#713f12" stroke-width="1.2" />
+      <polygon points="88,80 104,64 104,88 88,104" fill="url(#gold-side)" stroke="#713f12" stroke-width="1.2" />
       <!-- Front Face '2' (Block Isometric) -->
-      <path d="M 0 0 L 88 0 L 88 40 L 32 40 L 32 58 L 88 58 L 88 114 L 0 114 L 0 74 L 56 74 L 56 40 L 0 40 Z" 
-            fill="url(#gold-front)" stroke="#451a03" stroke-width="2" />
-      
-      <!-- Front Bevel Internal Accent Lines -->
-      <polygon points="0,40 16,24 48,24 32,40" fill="url(#gold-top)" opacity="0.7" />
-      <polygon points="0,74 16,58 72,58 56,74" fill="url(#gold-top)" opacity="0.6" />
+      <path d="M 0 0 L 88 0 L 88 36 L 28 36 L 28 50 L 88 50 L 88 104 L 0 104 L 0 68 L 60 68 L 60 36 L 0 36 Z" 
+            fill="url(#gold-front)" stroke="#713f12" stroke-width="1.5" />
     </g>
 
-    <!-- ---------------------------------------------------- -->
-    <!-- DIGIT 2: '0' (Ice-Cyan Cosmic Crystal Extrusion)     -->
-    <!-- ---------------------------------------------------- -->
-    <g transform="translate(375, 0)">
-      <!-- Top Outer Bevel -->
-      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#cyan-top)" stroke="#0369a1" stroke-width="1.2" />
-      
-      <!-- Right Outer Side Extrusion -->
-      <polygon points="88,0 104,-16 104,98 88,114" fill="url(#cyan-side)" stroke="#0369a1" stroke-width="1.2" />
-      
-      <!-- Inner Cutout Top Bevel -->
-      <polygon points="26,88 42,72 78,72 62,88" fill="url(#cyan-top)" stroke="#0369a1" stroke-width="1" />
-      
-      <!-- Inner Cutout Left Side Extrusion -->
-      <polygon points="26,26 42,10 42,72 26,88" fill="url(#cyan-side)" opacity="0.75" />
-
-      <!-- Front Face '0' (Outer Box with Inner Window) -->
-      <path d="M 0 0 L 88 0 L 88 114 L 0 114 Z M 26 26 L 62 26 L 62 88 L 26 88 Z" 
-            fill="url(#cyan-front)" stroke="#022e4d" stroke-width="2" fill-rule="evenodd" />
+    <!-- ==================== DIGIT 2: '0' ==================== -->
+    <g transform="translate(435, 130)">
+      <!-- Top Bevel Highlight -->
+      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#gold-top)" stroke="#713f12" stroke-width="1.2" />
+      <polygon points="28,72 44,56 76,56 60,72" fill="url(#gold-top)" stroke="#713f12" stroke-width="1" />
+      <!-- Right Side Extrusions -->
+      <polygon points="88,0 104,-16 104,88 88,104" fill="url(#gold-side)" stroke="#713f12" stroke-width="1.2" />
+      <polygon points="28,32 44,16 44,88 28,104" fill="url(#gold-side)" opacity="0.6" stroke="#713f12" stroke-width="1" />
+      <!-- Front Face '0' -->
+      <path d="M 0 0 L 88 0 L 88 104 L 0 104 Z M 28 32 L 60 32 L 60 72 L 28 72 Z" 
+            fill-rule="evenodd" fill="url(#gold-front)" stroke="#713f12" stroke-width="1.5" />
     </g>
 
-    <!-- ---------------------------------------------------- -->
-    <!-- DIGIT 3: '2' (Gold Facet Extrusion)                  -->
-    <!-- ---------------------------------------------------- -->
-    <g transform="translate(510, 0)">
+    <!-- ==================== DIGIT 3: '2' ==================== -->
+    <g transform="translate(610, 130)">
       <!-- Top Bevel Highlight (Top Bar) -->
-      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#gold-top)" stroke="#78350f" stroke-width="1.2" />
-      
-      <!-- Right Side Extrusion (Top Arch) -->
-      <polygon points="88,0 104,-16 104,24 88,40" fill="url(#gold-side)" stroke="#78350f" stroke-width="1.2" />
-      
-      <!-- Right Side Extrusion (Bottom Bar) -->
-      <polygon points="88,90 104,74 104,98 88,114" fill="url(#gold-side)" stroke="#78350f" stroke-width="1.2" />
-      
+      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#gold-top)" stroke="#713f12" stroke-width="1.2" />
       <!-- Mid Step Top Bevel -->
-      <polygon points="0,90 16,74 104,74 88,90" fill="url(#gold-top)" stroke="#78350f" stroke-width="1.2" />
-      
+      <polygon points="0,80 16,64 104,64 88,80" fill="url(#gold-top)" stroke="#713f12" stroke-width="1.2" />
+      <!-- Right Side Extrusions -->
+      <polygon points="88,0 104,-16 104,24 88,40" fill="url(#gold-side)" stroke="#713f12" stroke-width="1.2" />
+      <polygon points="88,80 104,64 104,88 88,104" fill="url(#gold-side)" stroke="#713f12" stroke-width="1.2" />
       <!-- Front Face '2' (Block Isometric) -->
-      <path d="M 0 0 L 88 0 L 88 40 L 32 40 L 32 58 L 88 58 L 88 114 L 0 114 L 0 74 L 56 74 L 56 40 L 0 40 Z" 
-            fill="url(#gold-front)" stroke="#451a03" stroke-width="2" />
-      
-      <!-- Front Bevel Internal Accent Lines -->
-      <polygon points="0,40 16,24 48,24 32,40" fill="url(#gold-top)" opacity="0.7" />
-      <polygon points="0,74 16,58 72,58 56,74" fill="url(#gold-top)" opacity="0.6" />
+      <path d="M 0 0 L 88 0 L 88 36 L 28 36 L 28 50 L 88 50 L 88 104 L 0 104 L 0 68 L 60 68 L 60 36 L 0 36 Z" 
+            fill="url(#gold-front)" stroke="#713f12" stroke-width="1.5" />
     </g>
 
-    <!-- ---------------------------------------------------- -->
-    <!-- DIGIT 4: '7' (Emerald-Gold Cosmic Extrusion)         -->
-    <!-- ---------------------------------------------------- -->
-    <g transform="translate(645, 0)">
-      <!-- Top Bevel Bar -->
-      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#gold-top)" stroke="#78350f" stroke-width="1.2" />
-      
-      <!-- Right Side Extrusions (Top Corner) -->
-      <polygon points="88,0 104,-16 104,14 88,30" fill="url(#gold-side)" stroke="#78350f" stroke-width="1.2" />
-      
-      <!-- Diagonal Stem Right Extrusion -->
-      <polygon points="88,30 104,14 74,98 58,114" fill="url(#gold-side)" stroke="#78350f" stroke-width="1.2" />
-      
-      <!-- Under-Bar Bevel -->
-      <polygon points="0,30 16,14 44,14 28,30" fill="url(#gold-top)" opacity="0.6" />
-
+    <!-- ==================== DIGIT 4: '7' ==================== -->
+    <g transform="translate(785, 130)">
+      <!-- Top Bevel Highlight -->
+      <polygon points="0,0 16,-16 104,-16 88,0" fill="url(#gold-top)" stroke="#713f12" stroke-width="1.2" />
+      <!-- Right Side Extrusions -->
+      <polygon points="88,0 104,-16 104,88 88,104" fill="url(#gold-side)" stroke="#713f12" stroke-width="1.2" />
       <!-- Front Face '7' -->
-      <path d="M 0 0 L 88 0 L 88 30 L 58 114 L 28 114 L 58 30 L 0 30 Z" 
-            fill="url(#gold-front)" stroke="#451a03" stroke-width="2" />
+      <path d="M 0 0 L 88 0 L 88 104 L 60 104 L 60 36 L 0 36 Z" 
+            fill="url(#gold-front)" stroke="#713f12" stroke-width="1.5" />
     </g>
 
   </g>
 
   <!-- ============================================================ -->
-  <!-- KINETIC LASER HORIZON / ACCELERATION WAVE                   -->
+  <!-- 5. KINETIC QUANTUM LASER EKG / AURORA WAVE                   -->
   <!-- ============================================================ -->
-  <g transform="translate(0, 275)">
-    <!-- Underlying Neon Laser Glow Path -->
-    <path d="M 60 0 L 260 0 L 290 -25 L 320 35 L 350 -45 L 380 40 L 410 -20 L 440 0 L 760 0 L 790 -30 L 820 40 L 850 -40 L 880 25 L 910 0 L 1140 0" 
-          fill="none" stroke="#38bdf8" stroke-width="6" opacity="0.25" filter="url(#super-glow)" />
-    
-    <!-- Foreground Laser Pulse Beam -->
-    <path d="M 60 0 L 260 0 L 290 -25 L 320 35 L 350 -45 L 380 40 L 410 -20 L 440 0 L 760 0 L 790 -30 L 820 40 L 850 -40 L 880 25 L 910 0 L 1140 0" 
-          fill="none" stroke="url(#laser-pulse-grad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+  <g transform="translate(0, 260)">
+    <!-- Underlying Neon Glow Path -->
+    <path d="M 60 0 L 260 0 L 290 -30 L 320 35 L 350 -45 L 380 40 L 410 -25 L 435 0 L 760 0 L 790 -35 L 820 40 L 850 -25 L 875 0 L 1140 0" 
+          fill="none" stroke="#00f2fe" stroke-width="6" opacity="0.3" filter="url(#laser-glow)" />
 
-    <!-- Pulsing Laser Core Sparks -->
-    <circle cx="350" cy="-45" r="4.5" fill="#ffffff" filter="url(#super-glow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="350" cy="-45" r="2.5" fill="#ffd700" />
-    
-    <circle cx="850" cy="-40" r="4.5" fill="#ffffff" filter="url(#super-glow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="850" cy="-40" r="2.5" fill="#38bdf8" />
+    <!-- Crisp Dynamic Foreground Pulse -->
+    <path d="M 60 0 L 260 0 L 290 -30 L 320 35 L 350 -45 L 380 40 L 410 -25 L 435 0 L 760 0 L 790 -35 L 820 40 L 850 -25 L 875 0 L 1140 0" 
+          fill="none" stroke="url(#laser-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="anim-laser" />
+
+    <!-- Quantum Pulse Nodes -->
+    <circle cx="350" cy="-45" r="4.5" fill="#ffffff" filter="url(#laser-glow)" />
+    <circle cx="350" cy="-45" r="2.5" fill="#fbbf24" />
+    <circle cx="320" cy="35" r="3.5" fill="#38bdf8" />
+    <circle cx="820" cy="40" r="4" fill="#10b981" filter="url(#laser-glow)" />
+    <circle cx="790" cy="-35" r="3.5" fill="#fbbf24" />
   </g>
 
   <!-- ============================================================ -->
-  <!-- SUB-HEADLINE & SYSTEM CAPABILITIES                           -->
+  <!-- 6. EDITORIAL SUBTITLE & MISSION STATEMENT                    -->
   <!-- ============================================================ -->
-  <text x="600" y="340" text-anchor="middle" 
+  <text x="600" y="306" text-anchor="middle" 
         font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Inter, sans-serif" 
         font-size="13" font-weight="700" letter-spacing="5" fill="#94a3b8">
-    60 FPS THREE.JS WEBGL • REAL-TIME PYROTECHNIC PHYSICS • ZERO-ASSET WEB AUDIO
+    RELATIVISTIC SPACETIME TUNNEL • AURORA CHRONOMETER • 2D PARTICLE PYROTECHNICS
   </text>
 
-  <!-- Editorial Mission Statement -->
-  <text x="600" y="375" text-anchor="middle" 
+  <text x="600" y="342" text-anchor="middle" 
         font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Inter, sans-serif" 
-        font-size="18" font-weight="400" fill="#f8fafc">
-    Experience a cinematic 3D journey through the multiverse into 2027 at 
-    <tspan fill="#38bdf8" font-weight="700">yrphappynewyearcoep27.netlify.app</tspan>
+        font-size="19" font-weight="500" fill="#f8fafc">
+    Step across the cosmic event horizon into <tspan fill="#facc15" font-weight="700">2027</tspan> with browser-native 60fps WebGL.
   </text>
-
 </svg>

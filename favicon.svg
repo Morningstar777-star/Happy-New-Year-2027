@@ -1,22 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" style="display:block">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <!-- Deep Obsidian Space Core -->
     <radialGradient id="bgObsidian" cx="45%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#121b33"/>
-      <stop offset="45%" stop-color="#070b18"/>
+      <stop offset="0%" stop-color="#141e38"/>
+      <stop offset="45%" stop-color="#080e1c"/>
       <stop offset="85%" stop-color="#020408"/>
       <stop offset="100%" stop-color="#000000"/>
     </radialGradient>
     
     <!-- Cosmic Aurora Core Glow -->
     <radialGradient id="auroraGlow" cx="50%" cy="50%" r="55%">
-      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.38"/>
-      <stop offset="30%" stop-color="#4FACFE" stop-opacity="0.18"/>
-      <stop offset="65%" stop-color="#10B981" stop-opacity="0.08"/>
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#4FACFE" stop-opacity="0.22"/>
+      <stop offset="65%" stop-color="#10B981" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Metallic Gold Rim -->
+    <!-- Metallic Gold Outer Rim -->
     <linearGradient id="goldRim" x1="15%" y1="15%" x2="85%" y2="85%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="18%" stop-color="#FFF9C4"/>
@@ -51,26 +51,12 @@
       <stop offset="100%" stop-color="#4E340E"/>
     </linearGradient>
 
-    <!-- Diagonal Lit -->
-    <linearGradient id="diagLit" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="35%" stop-color="#FFF9C4"/>
-      <stop offset="100%" stop-color="#FFD54F"/>
-    </linearGradient>
-
-    <!-- Diagonal Shadow -->
-    <linearGradient id="diagShad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#B28921"/>
-      <stop offset="65%" stop-color="#6E4A0C"/>
-      <stop offset="100%" stop-color="#362204"/>
-    </linearGradient>
-
-    <!-- Orbit Gradient -->
+    <!-- Tilted Orbit Gradient -->
     <linearGradient id="orbitGrad" x1="10%" y1="10%" x2="90%" y2="90%">
       <stop offset="0%" stop-color="#00F2FE" stop-opacity="1"/>
-      <stop offset="25%" stop-color="#4FACFE" stop-opacity="0.45"/>
-      <stop offset="55%" stop-color="#FFE082" stop-opacity="0.25"/>
-      <stop offset="80%" stop-color="#FFD54F" stop-opacity="0.75"/>
+      <stop offset="30%" stop-color="#4FACFE" stop-opacity="0.6"/>
+      <stop offset="55%" stop-color="#FFE082" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#FFD54F" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#FFF9C4" stop-opacity="1"/>
     </linearGradient>
 
@@ -78,76 +64,88 @@
     <radialGradient id="coreFlare" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="20%" stop-color="#FFFDE7" stop-opacity="1"/>
-      <stop offset="45%" stop-color="#FFD54F" stop-opacity="0.6"/>
-      <stop offset="75%" stop-color="#FFA000" stop-opacity="0.2"/>
+      <stop offset="45%" stop-color="#FFD54F" stop-opacity="0.65"/>
+      <stop offset="75%" stop-color="#FFA000" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Circular clip to contain everything -->
-    <clipPath id="circleClip">
-      <circle cx="256" cy="256" r="252"/>
+    <filter id="emblemGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Circular clip with radius 216 inside 512x512 canvas: 40px safe margin -->
+    <clipPath id="emblemClip">
+      <circle cx="256" cy="256" r="216"/>
     </clipPath>
   </defs>
 
-  <!-- Circular clipping container ensures no bleed -->
-  <g clip-path="url(#circleClip)">
-    <!-- 1. Obsidian Background Fill -->
-    <circle cx="256" cy="256" r="252" fill="url(#bgObsidian)"/>
-    <circle cx="256" cy="256" r="252" fill="url(#auroraGlow)"/>
+  <!-- Ambient Outer Glow Ring -->
+  <circle cx="256" cy="256" r="222" fill="none" stroke="#FFD54F" stroke-width="1.5" stroke-opacity="0.2" filter="url(#emblemGlow)"/>
 
-    <!-- 2. Astrolabe Chrono-Rings -->
-    <circle cx="256" cy="256" r="220" fill="none" stroke="#FFD54F" stroke-width="1.8" stroke-opacity="0.35" stroke-dasharray="3 7"/>
-    <circle cx="256" cy="256" r="172" fill="none" stroke="#00F2FE" stroke-width="1.2" stroke-opacity="0.25"/>
-    <circle cx="256" cy="256" r="96" fill="none" stroke="#FFE082" stroke-width="1" stroke-opacity="0.3"/>
+  <!-- Emblem Disc with 40px margin on all sides -->
+  <g clip-path="url(#emblemClip)">
+    <!-- 1. Obsidian Background -->
+    <circle cx="256" cy="256" r="216" fill="url(#bgObsidian)"/>
+    <circle cx="256" cy="256" r="216" fill="url(#auroraGlow)"/>
+
+    <!-- 2. Astrolabe Chrono Rings -->
+    <circle cx="256" cy="256" r="185" fill="none" stroke="#FFD54F" stroke-width="1.5" stroke-opacity="0.35" stroke-dasharray="3 7"/>
+    <circle cx="256" cy="256" r="145" fill="none" stroke="#00F2FE" stroke-width="1.2" stroke-opacity="0.28"/>
+    <circle cx="256" cy="256" r="82" fill="none" stroke="#FFE082" stroke-width="1" stroke-opacity="0.3"/>
 
     <!-- 3. Tilted Spacetime Orbit -->
-    <ellipse cx="256" cy="256" rx="206" ry="68" transform="rotate(-28 256 256)" fill="none" stroke="url(#orbitGrad)" stroke-width="5"/>
+    <ellipse cx="256" cy="256" rx="176" ry="58" transform="rotate(-28 256 256)" fill="none" stroke="url(#orbitGrad)" stroke-width="4.5"/>
 
     <!-- Orbital nodes -->
-    <circle cx="86" cy="162" r="5.5" fill="#00F2FE"/>
-    <circle cx="86" cy="162" r="10" fill="none" stroke="#00F2FE" stroke-opacity="0.6" stroke-width="1.5"/>
-    <circle cx="426" cy="350" r="6" fill="#FFF9C4"/>
-    <circle cx="426" cy="350" r="11" fill="none" stroke="#FFD54F" stroke-opacity="0.6" stroke-width="1.5"/>
+    <circle cx="110" cy="176" r="5" fill="#00F2FE" filter="url(#emblemGlow)"/>
+    <circle cx="110" cy="176" r="9" fill="none" stroke="#00F2FE" stroke-opacity="0.7" stroke-width="1.5"/>
+    <circle cx="402" cy="336" r="5" fill="#FFF9C4" filter="url(#emblemGlow)"/>
+    <circle cx="402" cy="336" r="9" fill="none" stroke="#FFD54F" stroke-opacity="0.7" stroke-width="1.5"/>
 
-    <!-- 4. Diagonal Rays -->
-    <polygon points="256,256 244,268 148,148" fill="url(#specularGold)"/>
-    <polygon points="256,256 148,148 268,244" fill="url(#mediumGold)"/>
+    <!-- 4. Diagonal Nova Rays (Scaled cleanly inside r=216) -->
+    <polygon points="256,256 246,266 164,164" fill="url(#specularGold)"/>
+    <polygon points="256,256 164,164 266,246" fill="url(#mediumGold)"/>
 
-    <polygon points="256,256 244,244 364,148" fill="url(#mediumGold)"/>
-    <polygon points="256,256 364,148 268,268" fill="url(#shadowGold)"/>
+    <polygon points="256,256 246,246 348,164" fill="url(#mediumGold)"/>
+    <polygon points="256,256 348,164 266,266" fill="url(#shadowGold)"/>
 
-    <polygon points="256,256 244,244 148,364" fill="url(#mediumGold)"/>
-    <polygon points="256,256 148,364 268,268" fill="url(#shadowGold)"/>
+    <polygon points="256,256 246,246 164,348" fill="url(#mediumGold)"/>
+    <polygon points="256,256 164,348 266,266" fill="url(#shadowGold)"/>
 
-    <polygon points="256,256 268,244 364,364" fill="url(#shadowGold)"/>
-    <polygon points="256,256 364,364 244,268" fill="url(#diagShad)"/>
+    <polygon points="256,256 266,246 348,348" fill="url(#shadowGold)"/>
+    <polygon points="256,256 348,348 246,266" fill="url(#shadowGold)"/>
 
-    <!-- 5. Cardinal Nova Rays -->
-    <polygon points="256,256 226,256 256,48" fill="url(#specularGold)"/>
-    <polygon points="256,256 256,48 286,256" fill="url(#shadowGold)"/>
+    <!-- 5. Cardinal Nova Rays (Top reaches y=78, bottom reaches y=434, cleanly inside r=216) -->
+    <polygon points="256,256 230,256 256,78" fill="url(#specularGold)"/>
+    <polygon points="256,256 256,78 282,256" fill="url(#shadowGold)"/>
 
-    <polygon points="256,256 256,226 48,256" fill="url(#specularGold)"/>
-    <polygon points="256,256 48,256 256,286" fill="url(#shadowGold)"/>
+    <polygon points="256,256 256,230 78,256" fill="url(#specularGold)"/>
+    <polygon points="256,256 78,256 256,282" fill="url(#shadowGold)"/>
 
-    <polygon points="256,256 256,226 464,256" fill="url(#mediumGold)"/>
-    <polygon points="256,256 464,256 256,286" fill="url(#shadowGold)"/>
+    <polygon points="256,256 256,230 434,256" fill="url(#mediumGold)"/>
+    <polygon points="256,256 434,256 256,282" fill="url(#shadowGold)"/>
 
-    <polygon points="256,256 226,256 256,464" fill="url(#mediumGold)"/>
-    <polygon points="256,256 256,464 286,256" fill="url(#shadowGold)"/>
+    <polygon points="256,256 230,256 256,434" fill="url(#mediumGold)"/>
+    <polygon points="256,256 256,434 282,256" fill="url(#shadowGold)"/>
 
-    <!-- 6. Core Singularity Aura -->
-    <circle cx="256" cy="256" r="64" fill="url(#coreFlare)"/>
+    <!-- 6. Singularity Core Flare -->
+    <circle cx="256" cy="256" r="54" fill="url(#coreFlare)"/>
 
     <!-- 7. Faceted Diamond Crystal -->
-    <polygon points="256,218 256,256 224,256" fill="#FFFFFF"/>
-    <polygon points="256,218 288,256 256,256" fill="#FFF9C4"/>
-    <polygon points="256,294 224,256 256,256" fill="#FFCA28"/>
-    <polygon points="256,294 256,256 288,256" fill="#D4AF37"/>
+    <polygon points="256,224 256,256 228,256" fill="#FFFFFF"/>
+    <polygon points="256,224 284,256 256,256" fill="#FFF9C4"/>
+    <polygon points="256,288 228,256 256,256" fill="#FFCA28"/>
+    <polygon points="256,288 256,256 284,256" fill="#D4AF37"/>
 
     <!-- 8. Central Spark -->
-    <circle cx="256" cy="256" r="7" fill="#FFFFFF"/>
+    <circle cx="256" cy="256" r="6" fill="#FFFFFF" filter="url(#emblemGlow)"/>
   </g>
 
-  <!-- Gold Rim drawn OUTSIDE the clip so the stroke sits on the edge cleanly -->
-  <circle cx="256" cy="256" r="249" fill="none" stroke="url(#goldRim)" stroke-width="6"/>
+  <!-- Metallic Gold Outer Rim Ring -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="url(#goldRim)" stroke-width="6"/>
+  <circle cx="256" cy="256" r="212" fill="none" stroke="#FFD54F" stroke-width="1" stroke-opacity="0.5"/>
 </svg>

@@ -1,5 +1,5 @@
 # Robots.txt for Happy New Year 2027 Experience
-# Optimized for Universal Search & Generative Engine Optimization (GEO)
+# Optimized for Universal Search & Generative Engine Optimization (GEO) according to Claude-SEO standards
 
 User-agent: *
 Allow: /
@@ -17,7 +17,7 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# AI & LLM Search Agents (GEO / AEO)
+# Generative AI & LLM Search Agents (GEO / AEO)
 User-agent: ClaudeBot
 Allow: /
 
@@ -36,5 +36,5 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# Sitemap
-Sitemap: https://happy-new-year-2027.netlify.app/sitemap.xml
+# Sitemaps & Machine-Readable AI Knowledge
+Sitemap: https://yrphappynewyearcoep27.netlify.app/sitemap.xml

@@ -37,7 +37,7 @@
 
 <p align="center">
   <a href="https://yrphappynewyearcoep27.netlify.app/">
-    <img src="favicon.png" alt="Happy New Year 2027 Celestial Emblem" width="160" style="border-radius: 50%; box-shadow: 0 0 45px rgba(255, 215, 0, 0.45); margin-bottom: 12px;" />
+    <img src="docs/assets/chrono_nova_emblem.svg" alt="Happy New Year 2027 Chrono-Nova Emblem" width="160" height="160" style="display: block; margin: 0 auto 12px auto; filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.5));" />
   </a>
   <br />
   <em>Click the Chrono-Nova emblem above to enter the live experience at <a href="https://yrphappynewyearcoep27.netlify.app/">yrphappynewyearcoep27.netlify.app</a></em>
