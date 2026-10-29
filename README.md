@@ -37,11 +37,31 @@
 
 <p align="center">
   <a href="https://yrphappynewyearcoep27.netlify.app/">
-    <img src="docs/assets/chrono_nova_emblem.svg" alt="Happy New Year 2027 Chrono-Nova Emblem" width="160" height="160" style="display: block; margin: 0 auto 12px auto; filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.5));" />
+    <img src="docs/assets/demo_preview.gif" alt="Happy New Year 2027 3D Multiverse Live Demonstration" width="920" style="border-radius: 14px; box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65); border: 1px solid rgba(255, 255, 255, 0.12);" />
   </a>
-  <br />
-  <em>Click the Chrono-Nova emblem above to enter the live experience at <a href="https://yrphappynewyearcoep27.netlify.app/">yrphappynewyearcoep27.netlify.app</a></em>
+  <br /><br />
+  <a href="docs/assets/demo_preview.mp4">🎬 <strong>Watch Full 1080p Walkthrough Video (MP4)</strong></a> &nbsp;•&nbsp; 
+  <a href="https://yrphappynewyearcoep27.netlify.app/">🚀 <strong>Launch Live 3D Experience (60 FPS) »</strong></a>
 </p>
+
+<p align="center">
+  <a href="https://yrphappynewyearcoep27.netlify.app/">
+    <img src="docs/assets/chrono_nova_emblem.svg" alt="Happy New Year 2027 Chrono-Nova Emblem" width="120" height="120" style="display: block; margin: 12px auto 6px auto; filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));" />
+  </a>
+  <em>Click the Chrono-Nova emblem or live preview above to enter the experience at <a href="https://yrphappynewyearcoep27.netlify.app/">yrphappynewyearcoep27.netlify.app</a></em>
+</p>
+
+<details>
+<summary><b>🎬 Video Demonstration Chapters & Interactive Walkthrough</b> (Click to expand)</summary>
+
+| Timestamp | Phase | Technical Highlights |
+| :---: | :--- | :--- |
+| **00:00 - 00:26** | **Act I: Relativistic Cosmic Spacetime Dive** | Three.js WebGL procedural wormhole cylinder, black hole gravitational lensing, and multi-lingual welcoming core. |
+| **00:26 - 00:48** | **Act II: Aurora Borealis Celestial Chronometer** | Liquid Glass 2.0 frosted glassmorphism, live dynamic millisecond countdown, and chromatic winter atmosphere. |
+| **00:48 - 01:05** | **Act III: Supernova Fireworks & Shimmering 2027** | 2D Canvas velocity particle pyrotechnics, SVG calligraphy stroke morph, and gold typographic luster. |
+| **01:05 - 01:14** | **Act IV: Viral Personalized Greeting Modal** | One-click instant wish sharing with direct WhatsApp and X (Twitter) URL parameter resolver (`?from=Name`). |
+
+</details>
 
 </div>
 
